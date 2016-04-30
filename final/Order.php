@@ -181,10 +181,9 @@ session_start();
                         <div>
                             <select name="num" class="pull-right">
                                 <optgroup label="Quantity">
-                                    <option> 1 </option>
-                                    <option> 2 </option>
-                                    <option> 3 </option>
-                                    <option> 4 </option>
+                                  <?php for($i=1;$i<=$row["Num"];$i++){?>
+								   <option> <?php echo $i?> </option>
+								  <?php }?>
                                 </optgroup>
                             </select>
                         </div>
