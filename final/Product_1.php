@@ -115,7 +115,7 @@ $row=$controller->View_s_Product();
                         <h4 class="pull-right"><?php echo "$".$row['Price'];?></h4>
                         <h4><a href="#"> <?php echo $row['Name'];?></a>
                         </h4>
-						<p><?php echo "Description:  ".$row['Description'];?></p>
+						
 					    <p><?php echo "quantity:  ".$row['Num'];?></p>
 					    <p><?php echo "Type:  ".$row['P_Type'];?></p>
 						<p><?php echo "Country:  ".$row['Country'];?></p>
@@ -137,7 +137,8 @@ $row=$controller->View_s_Product();
                     </div>
                 </div>
 
-				
+				<p><font size="5" color="red"><?php echo "Description: ";?></font></p>
+				<p><font size="3" color="white"><?php echo $row["Description"];?></font></p>
 				<div class="well">
                         <h4>Leave a Comment:</h4>
                         <form role="form">
