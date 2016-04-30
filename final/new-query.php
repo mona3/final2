@@ -326,7 +326,7 @@ class Order extends  foo
 {
 	  public function Get_Product_Id($ID)
 	{
-            $sql = "SELECT Product_Id FROM orders where Account_Id='".$ID."'";
+            $sql = "SELECT * FROM orders where Account_Id='".$ID."'";
             $result= mysqli_query($this->conn, $sql);
 			return $result;
 	}

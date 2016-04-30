@@ -161,7 +161,7 @@ session_start();
                                         <h4 class="pull-right"><?php echo "$" .$row["Price"]; ?></h4>
 										<h4> <a href="Product_1.php?content=<?php echo $row["Name"];?>"><?php echo $row["Name"];?></a></h4>
                                   
-										<p><?php echo "quantity:  ".$row["Num"]; ?></p>
+										<p><?php echo "quantity:  ".$row1["Num"]; ?></p>
 										<p><?php echo "Type:  ".$row["P_Type"]; ?></p>
 										<p><?php echo "Country:  ".$row["Country"];?></p>
 										
