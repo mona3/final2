@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
-=======
-echo fghjkl
->>>>>>> master
+
 <head>
 
     <meta charset="utf-8">
