@@ -74,23 +74,23 @@ session_start();
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="Sign_up.html">Sign up</a>
+                        <a href="Sign_up.php">Sign up</a>
                     </li>
                     <li>
-                        <a href="Login.html">Login</a>
+                        <a href="Login.php">Login</a>
                     </li>
 
                     <li>
-                        <a href="Acc_Inf.html">About</a>
+                        <a href="Acc_Inf.php">About</a>
                     </li>
                     <li>
-                        <a href="Order.html">Orders</a>
+                        <a href="Order.php">Orders</a>
                     </li>
                     <li>
-                        <a href="Offers.html">Offers</a>
+                        <a href="Offers.php">Offers</a>
                     </li>
                     <li>
-                        <a href="Gallery.html">Galleries</a>
+                        <a href="Gallery.php">Galleries</a>
                     </li>
 
 
