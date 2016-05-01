@@ -200,6 +200,13 @@ session_start();
                 </div>
 <?php						
       }
+	   ?>
+	   <form action="" method="post" >
+	   <div>
+           <button name="Action2" dir="rtl" type="submit" class="btn btn-primary" value="Delete All">Delete All</button>
+          </div>
+		  </form >
+	<?php
     } 
 
     else 
