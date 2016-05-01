@@ -178,7 +178,7 @@ session_start();
                             </p>
 
                         </div>
-						<form action="" method="post" >
+						<form action="Order.php?content=<?php echo $row["Name"];?>" method="post" >
                         <div>
                             <select name="num" class="pull-right" >
                                 <optgroup label="Quantity">
