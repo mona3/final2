@@ -330,6 +330,13 @@ class Order extends  foo
             $result= mysqli_query($this->conn, $sql);
 			return $result;
 	}
+	
+	 public function Update_Order($Id,$Product_Id)
+	{
+            $sql = "UPDATE Order SET Name ='$Name',Phone_Num ='$Phone',Email='$Email',img='$img',description='$desc' where Name='".$old_name."'";
+            $result= mysqli_query($this->conn, $sql);
+			return $result;
+	}
 
 }
 ?>
