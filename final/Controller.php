@@ -528,8 +528,8 @@ if(isset($_FILES['image']))
         if($_POST['Action']=="Update Quantity")
         {
             $num= $_POST["num"];
-			echo $num;
-			echo $_SESSION['P'];
+			$content= isset($_GET['content'])?$_GET['content']:'';
+			
 		}         
 	  }
 
