@@ -246,7 +246,7 @@ public function Delete_Company()
 			
 			$_SESSION['product']=$result;
 			//echo "<script type='text/javascript'>alert('$success');</script>";
-			echo "<script>window.location = 'http://localhost/777/Edit_Product.php' </script>";
+			echo "<script>window.location = 'http://localhost/final2/final/Edit_Product.php' </script>";
 			
 	        
 			
