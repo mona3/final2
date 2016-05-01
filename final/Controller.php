@@ -521,6 +521,48 @@ if(isset($_FILES['image']))
 			 return $row ;
             
 	}
+	
+	public  function Get_PName()
+	{
+		
+		
+		$content= isset($_GET['content'])?$_GET['content']:'';
+		$result1 = $this->Product->Get_Product_info2($content);
+        $row = mysqli_fetch_assoc($result1);
+	   
+	   return $row;
+	   
+	}
+	
+	
+	public function Add_to_cart()
+	{
+		 
+		
+		if(isset($_POST["action1"]) )
+      {     
+          
+  
+        if($_POST['action1']=="Add")
+        {
+		        
+  	     $row=self::Get_PName();
+		
+		$name= $this->Account->get_UserName();
+		$Accont_id = $this->Account->Get_Id($name);
+		$this->Order->Insert_order((int)$row['Num'],$Accont_id,$row['Id']);
+		
+		header("Location: http://localhost/final2/final/Order.php"); 
+	  }}
+	}
+        
+     
+	
+	
+	
+	
+	
+	
 	public function Modify_Quantity()
 	{     	$error="Edit_Company failed";
 	   $success="Company is Edited  successfully";

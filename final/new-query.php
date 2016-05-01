@@ -188,6 +188,24 @@ public function View_Acc()
 }
 class Product extends  foo
 {
+	/*public function Get_PName()
+	{
+		
+		
+		$content= isset($_GET['content'])?$_GET['content']:'';
+		$this->Order->Get_Product_info2($content);
+		$result=$this->Product->Get_Product_info2($content);
+       $row = mysqli_fetch_assoc($result);
+	   echo $content;
+	   return $row;
+	   
+	}*/
+	
+	
+	
+	
+	
+	
   public function View_Products()
 	{
 		
@@ -212,6 +230,7 @@ class Product extends  foo
             $result = mysqli_query($this->conn,$sql);
 			return $result;
 	}
+	
 	public function Delete_Product($name)
 	{
 		
@@ -229,12 +248,17 @@ class Product extends  foo
 	}
 	public function Get_Product_Id($name)
 	{
+	
 		
             $sql ="select Id FROM Product where Name='".$name."'";
             $result = mysqli_query($this->conn,$sql);
 			$row = mysqli_fetch_assoc($result);
 			return $row["Id"];
 	}
+	
+	
+	
+	
 	
 	public function Get_Product_info($Id)
 	{
@@ -331,12 +355,44 @@ class Order extends  foo
 			return $result;
 	}
 	
+	public function Get2_Product_Id($ID)
+	{
+            $sql = "SELECT * FROM orders where Account_Id='".$ID."'";
+            $result= mysqli_query($this->conn, $sql);
+			$row=mysqli_fetch_assoc($result);
+	        return $row["Id"];
+	}
+	
 	 public function Update_Order($Id,$Product_Id,$Num)
 	{
             $sql = "UPDATE Orders SET Num ='$Num' where Account_Id='".$Id."' AND Product_Id='".$Product_Id."'";
             $result= mysqli_query($this->conn, $sql);
 			return $result;
 	}
+	
+	
+	public function Insert_order($res,$Accont_id,$Product_id )
+	{
+	    
+	
+	    
+	    $sql="INSERT INTO orders (Num,Account_Id,product_Id) Values ('$res','$Accont_id','$Product_id')";
+        $result = mysqli_query($this->conn, $sql);			
+		if($result)
+		{
+		$error = "Sorry Your Login Name or Password is invalid , try again";
+		 
+		 echo "<script type='text/javascript'>alert('$error');</script>";
+			  
+		}
+		
+	}
+	
+
+	
+	
+	
+	
 
 }
 ?>

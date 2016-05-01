@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿<?php
+
+session_start();
+include("Controller.php");
+$controller=new controller();
+$Username = $controller->get_UserName();
+
+	
+?>
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -46,9 +58,7 @@
 
 <body>
 <?php 
-include("Controller.php");
-$controller=new controller();
-session_start();
+
 ?>
 
 
@@ -64,7 +74,7 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Home2.php">Home</a>
+                <a class="navbar-brand" href="After_login.php">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -74,10 +84,10 @@ session_start();
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="Sign_up.php">Sign up</a>
+                        <a href="view account.php"><?php echo $Username;?></a>
                     </li>
                     <li>
-                        <a href="Login.php">Login</a>
+                        <a href="Login.php">Logout</a>
                     </li>
 
                     <li>

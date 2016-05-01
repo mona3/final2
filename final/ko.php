@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 session_start();
 include("Controller.php");
@@ -70,7 +70,6 @@ $Username = $controller->get_UserName();
                     <li>
                         <a href="view account.php"><?php echo $Username;?></a>
                     </li>
-					
                     <li>
                         <a href="Login.php">Logout</a>
                     </li>
@@ -93,7 +92,6 @@ $Username = $controller->get_UserName();
 
     <!-- Page Content -->
     <div class="container">
-                        
 
         <div class="row">
 
@@ -108,7 +106,7 @@ $Username = $controller->get_UserName();
             </div>
 <?php 
 $row=$controller->View_s_Product();
-
+$res1=$row['Id'];
 $controller->Add_to_cart();
 //$controller->Add($res1);
 ?>
@@ -123,12 +121,11 @@ $controller->Add_to_cart();
                     <div class="caption-full">
                         <h4 class="pull-right"><?php echo "$".$row['Price'];?></h4>
                         <h4><a href="#"> <?php echo $row['Name'];?></a>
-						<form action ="" method = "post">
-						<input  name="action1" type="submit" value="Add" >
+						</br>
+						<form action = "" method = "post">
+						<input  name="action1" type="submit" value="Add To Cart"/>
 			
 						</form>
-						</br>
-						
                         </h4>
 						
 					    <p><?php echo "quantity:  ".$row['Num'];?></p>
@@ -136,7 +133,8 @@ $controller->Add_to_cart();
 						<p><?php echo "Country:  ".$row['Country'];?></p>
                         </div>
 
-                      
+                    
+
 
                     <div class="ratings">
                         <p class="pull-right">3 reviews</p>
@@ -248,8 +246,3 @@ $controller->Add_to_cart();
 </body>
 
 </html>
-<?php 
-
-//$controller->Add_to_cart();
-
-?>
