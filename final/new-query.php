@@ -387,7 +387,12 @@ class Order extends  foo
 		}
 		
 	}
-	
+	public function Delete_Order($Id)
+	{
+            $sql = "Delete  from Orders where 	Account_Id='".$Id."'";
+            $result= mysqli_query($this->conn, $sql);
+			return $result;
+	}
 
 	
 	

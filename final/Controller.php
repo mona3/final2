@@ -264,7 +264,7 @@ public function Delete_Company()
         {
             $name= $_POST["company"];			
 			$_SESSION['Company']=$name;
-	        echo "<script>window.location = 'http://localhost/777/Edit_Company.php' </script>";
+	        echo "<script>window.location = 'http://localhost/final/final2/Edit_Company.php' </script>";
 		
 	    }
 	  }
@@ -587,6 +587,22 @@ if(isset($_FILES['image']))
 		     echo "<script type='text/javascript'>alert('$error');</script>";
 	
 		    */
+		}         
+	  }
+
+	}
+	
+	public function Delete_Order()
+	{     	$error="Edit_Company failed";
+	   $success="Company is Edited  successfully";
+		if(isset($_POST['Action2']))
+      {          
+        if($_POST['Action2']=="Delete All")
+        {
+            $name= $this->Account->get_UserName();
+			$result1 = $this->Account->Get_Id($name);
+			$result2 = $this->Order->Delete_Order($result1);
+		   
 		}         
 	  }
 
