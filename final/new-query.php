@@ -333,7 +333,7 @@ class Order extends  foo
 	
 	 public function Update_Order($Id,$Product_Id,$Num)
 	{
-            $sql = "UPDATE Order SET Num ='$Num' where Account_Id='".$Id."' AND Product_Id='".$Product_Id."'";
+            $sql = "UPDATE Orders SET Num ='$Num' where Account_Id='".$Id."' AND Product_Id='".$Product_Id."'";
             $result= mysqli_query($this->conn, $sql);
 			return $result;
 	}
