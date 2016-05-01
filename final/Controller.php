@@ -522,7 +522,8 @@ if(isset($_FILES['image']))
             
 	}
 	public function Modify_Quantity()
-	{    
+	{     	$error="Edit_Company failed";
+	   $success="Company is Edited  successfully";
 		if(isset($_POST['Action']))
       {          
         if($_POST['Action']=="Update Quantity")
@@ -532,7 +533,14 @@ if(isset($_FILES['image']))
 		    $name= $this->Account->get_UserName();
 			$result1 = $this->Account->Get_Id($name);	
 			$result2 = $this->Product->Get_Product_Id($content);
-            $this->Order->Update_Order($result1,$result2,$num);			
+           $result3= $this->Order->Update_Order($result1,$result2,$num);
+		   if($result3)
+		  
+				echo "<script type='text/javascript'>alert('$success');</script>";
+	        else
+		     echo "<script type='text/javascript'>alert('$error');</script>";
+	
+		   
 		}         
 	  }
 
