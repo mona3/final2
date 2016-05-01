@@ -607,6 +607,20 @@ if(isset($_FILES['image']))
 	  }
 
 	}
+	
+	 public function search()
+ {
+ $error="failed";
+ $success="  success";
+ if(isset($_POST['action']))
+ {
+ if($_POST['action']=="search")
+ {
+ $name=$_POST['term'];
+ $result=$this->Product->search($name);
+ }
+ }
+ }
 }
 	
 	
