@@ -148,7 +148,7 @@ session_start();
     // output data of each row
     while($row1 = mysqli_fetch_assoc($result))
  
-         { $row=$controller->Get_Product_info($row1["Product_Id"]);
+         { $row=$controller->Get_Product_info($row1["product_Id"]);
 			 ?>
               
                 <div class="col-sm-4 col-lg-4 col-md-4">
@@ -159,7 +159,7 @@ session_start();
 								  </div>  
                                     <div class="caption">
                                         <h4 class="pull-right"><?php echo "$" .$row["Price"]; ?></h4>
-										<h4> <a href="Product_1.php?content=<?php echo $row["Name"];?>"><?php echo $row["Name"];?></a></h4>
+										<h4> <a href="Product_1.php?content=<?php echo $row["Name"]; $_SESSION['P']=$row["Name"]; ?>"><?php echo $row["Name"];?></a></h4>
                                   
 										<p><?php echo "quantity:  ".$row1["Num"]; ?></p>
 										<p><?php echo "Type:  ".$row["P_Type"]; ?></p>
@@ -178,8 +178,9 @@ session_start();
                             </p>
 
                         </div>
+						<form action="" method="post" >
                         <div>
-                            <select name="num" class="pull-right">
+                            <select name="num" class="pull-right" >
                                 <optgroup label="Quantity">
                                   <?php for($i=1;$i<=$row["Num"];$i++){?>
 								   <option> <?php echo $i?> </option>
@@ -188,8 +189,12 @@ session_start();
                             </select>
                         </div>
                         <div>
-                            <button dir="rtl" type="submit" class="btn btn-primary">Delete</button>
+                            <button name="Action" dir="rtl" type="submit" class="btn btn-primary" value="Delete">Delete</button>
                         </div>
+						 <div>
+                            <button name="Action" dir="rtl" type="submit" class="btn btn-primary" value="Update Quantity">Update Quantity</button>
+                        </div>
+						</form >
                        
 </div>
                 </div>
@@ -201,6 +206,7 @@ session_start();
     {
       echo "0 results";
     }
+	$controller->Modify_Quantity();
  ?>         
 
 

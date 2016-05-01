@@ -521,8 +521,20 @@ if(isset($_FILES['image']))
 			 return $row ;
             
 	}
+	public function Modify_Quantity()
+	{    
+		if(isset($_POST['Action']))
+      {          
+        if($_POST['Action']=="Update Quantity")
+        {
+            $num= $_POST["num"];
+			echo $num;
+			echo $_SESSION['P'];
+		}         
+	  }
 
 	}
+}
 	
 	
 
