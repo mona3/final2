@@ -529,7 +529,8 @@ if(isset($_FILES['image']))
         {
             $num= $_POST["num"];
 			$content= isset($_GET['content'])?$_GET['content']:'';
-		    	
+		    $name= $this->Account->get_UserName();
+			$result1 = $this->Account->Get_Id($name);	
 		}         
 	  }
 
