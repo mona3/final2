@@ -534,13 +534,17 @@ if(isset($_FILES['image']))
 			$result1 = $this->Account->Get_Id($name);	
 			$result2 = $this->Product->Get_Product_Id($content);
            $result3= $this->Order->Update_Order($result1,$result2,$num);
-		   if($result3)
+		   echo $result1;
+		   echo $result2;
+		   echo $num;
+		   
+		  /*  if($result3)
 		  
 				echo "<script type='text/javascript'>alert('$success');</script>";
 	        else
 		     echo "<script type='text/javascript'>alert('$error');</script>";
 	
-		   
+		    */
 		}         
 	  }
 
