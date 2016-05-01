@@ -114,6 +114,7 @@ $row=$controller->View_s_Product();
                     <div class="caption-full">
                         <h4 class="pull-right"><?php echo "$".$row['Price'];?></h4>
                         <h4><a href="#"> <?php echo $row['Name'];?></a>
+						<h4><a href="#"> <?php echo "Add to cart";?></a>
                         </h4>
 						
 					    <p><?php echo "quantity:  ".$row['Num'];?></p>

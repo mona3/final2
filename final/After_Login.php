@@ -8,9 +8,10 @@ $Username = $controller->get_UserName();
 	
 ?>
 
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
+
 
 <head>
 
@@ -57,8 +58,11 @@ $Username = $controller->get_UserName();
 
 <body>
 
-
-
+<?php 
+include("Controller.php");
+$controller=new controller();
+session_start();
+?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -71,7 +75,7 @@ $Username = $controller->get_UserName();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="After_Login.php">Home</a>
+                <a class="navbar-brand" href="Home2.php">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -88,18 +92,20 @@ $Username = $controller->get_UserName();
                     </li>
 
                     <li>
-                        <a href="Acc_Inf.html">About</a>
+                        <a href="Acc_Inf.php">About</a>
                     </li>
                     <li>
                         <a href="#">Posts</a>
                     </li>
                     <li>
-                        <a href="Offers.html">Offers</a>
+                        <a href="Offers.php">Offers</a>
                     </li>
                     <li>
-                        <a href="Gallery.html">Galleries</a>
+                        <a href="Gallery.php">Galleries</a>
                     </li>
-
+					<li>
+                        <a href="Order.php">My Cart</a>
+                    </li>
 
                 </ul>
             </div>
@@ -118,9 +124,28 @@ $Username = $controller->get_UserName();
             <div class="col-md-3">
                 <p class="lead">plumbing Companies</p>
                 <div class="list-group">
-                    <a href="Company_1.html" class="list-group-item">Company 1</a>
-                    <a href="Company_2.html" class="list-group-item">Company 2</a>
-                    <a href="Company_3.html" class="list-group-item">Company 3</a>
+           <?php 
+        $result=$controller->View_Company();
+     if (mysqli_num_rows($result) > 0) 
+     {
+    // output data of each row
+  
+    while($row = mysqli_fetch_assoc($result))
+
+    
+         {?>
+         <a href="Company_1.php?content=<?php echo $row["Name"];?>" class="list-group-item"><?php echo $row["Name"]; $SESSION['img2']=$row["Name"];?></a>
+							
+<?php						
+      }
+    } 
+
+    else 
+    {
+      echo "0 results";
+    }
+ ?>  
+             
 
                     <br />
                     <p class="lead">plumbing Galaries</p>
@@ -169,27 +194,32 @@ $Username = $controller->get_UserName();
                             </div>
 
                         </div>
-<?php 
-$result=$controller->View_Products();
-   
+<?php
+    
+    $result=$controller->View_Products();
      if (mysqli_num_rows($result) > 0) 
      {
     // output data of each row
     while($row = mysqli_fetch_assoc($result))
-  
-    
+ 
          {?>
             <div class="col-sm-4 col-lg-4 col-md-4">
                                 <div class="thumbnail">
                                     <!--  <img src="http://placehold.it/320x150" alt="">-->
-                                    <img src="rsz_d.jpg" alt="">
+                                 <div  style="height: 250px">
+								   <?php  echo '<img src="upload/'.$row["img"].'.jpg"  style="width: 100%;max-height: 100%" height="200"/>';?>
+								  </div>  
                                     <div class="caption">
                                         <h4 class="pull-right"><?php echo "$" .$row["Price"]; ?></h4>
-                                        <h4>
-                                            <a href="#"><?php echo $row["Name"];?></a>
-                                        </h4>
-                                        <p><?php echo $row["Description"];?></p>
+										<h4> <a href="Product_1.php?content=<?php echo $row["Name"];?>"><?php echo $row["Name"];?></a></h4>
+                                        
+										<p><?php echo "quantity:  ".$row["Num"]; ?></p>
+										<p><?php echo "Type:  ".$row["P_Type"]; ?></p>
+										<p><?php echo "Country:  ".$row["Country"];?></p>
+										
                                     </div>
+									
+					
                                     <div class="ratings">
                                         <p class="pull-right">12 reviews</p>
                                         <p>
@@ -212,9 +242,6 @@ $result=$controller->View_Products();
     {
       echo "0 results";
     }
-	
-	
-
  ?>         
 </body>
 
