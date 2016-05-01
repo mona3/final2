@@ -59,9 +59,7 @@ $Username = $controller->get_UserName();
 <body>
 
 <?php 
-include("Controller.php");
-$controller=new controller();
-session_start();
+
 ?>
 
     <!-- Navigation -->
