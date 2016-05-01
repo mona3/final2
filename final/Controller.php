@@ -531,7 +531,7 @@ if(isset($_FILES['image']))
 			$content= isset($_GET['content'])?$_GET['content']:'';
 		    $name= $this->Account->get_UserName();
 			$result1 = $this->Account->Get_Id($name);	
-			$result2 = $this->Product->Get_Id($content);
+			$result2 = $this->Product->Get_Product_Id($content);
             $this->Order->Update_Order($result1,$result2,$num);			
 		}         
 	  }
