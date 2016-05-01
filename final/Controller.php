@@ -507,8 +507,8 @@ if(isset($_FILES['image']))
 	   
 	   public function View_Order()
 	{
-	
-		$result1 = $this->Account->Get_Id("mo");
+	    $name= $this->Account->get_UserName();
+		$result1 = $this->Account->Get_Id($name);
 		$result2 = $this->Order->Get_Product_Id($result1 );
 		return $result2  ;
    
@@ -529,7 +529,7 @@ if(isset($_FILES['image']))
         {
             $num= $_POST["num"];
 			$content= isset($_GET['content'])?$_GET['content']:'';
-			
+		    	
 		}         
 	  }
 
