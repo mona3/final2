@@ -141,7 +141,7 @@ session_start();
 
             <div class="row">
 <?php
-    
+    $controller->Modify_Quantity();
     $result=$controller->View_Order();
      if (mysqli_num_rows($result) > 0) 
      {
@@ -206,7 +206,7 @@ session_start();
     {
       echo "0 results";
     }
-	$controller->Modify_Quantity();
+	
  ?>         
 
 
