@@ -183,7 +183,7 @@ public function Add_Product()
 	}
 	public function Calc_Rate()
 	{
-	 session_start();
+	 
 	$error="failed";
 	$success="  success";
 	if(isset($_POST['action']))
