@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 session_start();
 include("Controller.php");
@@ -202,6 +202,8 @@ $controller->Add_to_cart();
 					    <p><?php echo "quantity:  ".$row['Num'];?></p>
 					    <p><?php echo "Type:  ".$row['P_Type'];?></p>
 						<p><?php echo "Country:  ".$row['Country'];?></p>
+							<p><font size="5" color="red"><?php echo "Description: ";?></font></p>
+				<p><font size="3" color="white"><?php echo $row["Description"];?></font></p>
                         </div>
 
                       
@@ -237,8 +239,7 @@ $controller->Add_to_cart();
   $controller->Calc_Rate();
   ?>
 
-				<p><font size="5" color="red"><?php echo "Description: ";?></font></p>
-				<p><font size="3" color="white"><?php echo $row["Description"];?></font></p>
+			
 				<div class="well">
                         <h4>Leave a Comment:</h4>
                         <form role="form">
