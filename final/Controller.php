@@ -181,7 +181,30 @@ public function Add_Product()
 		return $result ;
    
 	}
+	public function Calc_Rate()
+	{
+	 session_start();
+	$error="failed";
+	$success="  success";
+	if(isset($_POST['action']))
 	
+	{
+	if($_POST['action']=="submit_rate")
+	{
+	$rate=$_POST["star"];
+	$name=$_SESSION["name"];
+	$t_r=$_SESSION["total_rate"];
+	$total_rate=$t_r+$rate;
+	$num_r=$_SESSION["num_rate"];
+	$num_rate=$num_r+1;
+	$new_rate=$total_rate/$num_rate;
+	
+	$result=$this->Product->set_rate($name,$new_rate);
+	    
+	   	
+}
+	}
+	}
 	public function Delete_Product()
 	
 	{  $error="deletion failed";
