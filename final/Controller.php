@@ -649,12 +649,8 @@ if(isset($_FILES['image']))
  $result=$this->Product->search($name);
  $_SESSION["Search"]=$name;
 
- /* while ($row = mysqli_fetch_assoc($_SESSION['Search']))
- {
-	 echo $row["Name"];
-	 echo $row["Price"];
- } */
- 	echo "<script>window.location = 'http://localhost/final2/final/search.php' </script>";
+ 
+ 	echo "<script>window.location = 'http://localhost/final2/final/search.php ?c=".$name."' </script>";
 		
  }
  }
@@ -663,7 +659,7 @@ if(isset($_FILES['image']))
 public function Get_Product_info2()
 { 
 
- $result=$this->Product->search($_SESSION["Search"]);
+ $result=$this->Product->search($_GET['c']);
  return $result;
 
 }
