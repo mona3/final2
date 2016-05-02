@@ -212,11 +212,27 @@ session_start();
                                     <div class="ratings">
                                         <p class="pull-right">12 reviews</p>
                                         <p>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                            <?php  $r=round($row["Rate"]); 
+						$i=5;
+						
+						while($r>0 and(( $r<5)or ($r==5)))
+						{
+						?>
+						 <span class="glyphicon glyphicon-star"></span>
+						<?php
+						$r=$r-1;
+						$i=$i-1;
+						}
+						while($i>0)
+						{
+						?>
+						<span class="glyphicon glyphicon-star-empty"></span>
+						<?php
+						$i=$i-1;
+						}
+						
+						?>
+               
 
                                         </p>
                                     </div>
