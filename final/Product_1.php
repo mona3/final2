@@ -44,6 +44,75 @@ $Username = $controller->get_UserName();
             background-position: top;
         }
     </style>
+ 
+ <style>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+}
+
+
+
+.cont {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  background: #fff;
+  color: #EEE;
+  overflow: hidden;
+}
+
+hr {
+  margin: 20px;
+  border: none;
+
+}
+
+div.title { font-size: 2em; }
+
+h1 span {
+  font-weight: 300;
+  color: #Fd4;
+}
+
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+</style>
 
 
 </head>
@@ -133,14 +202,41 @@ $controller->Add_to_cart();
 					    <p><?php echo "quantity:  ".$row['Num'];?></p>
 					    <p><?php echo "Type:  ".$row['P_Type'];?></p>
 						<p><?php echo "Country:  ".$row['Country'];?></p>
+							  <p><font size="5" color="red"><?php echo "Description: ";?></font></p>
+				<p><font size="3" color="black"><?php echo $row["Description"];?></font></p>
+                 <?php 
+  
+  $controller->Calc_Rate();
+  ?><p>
+                            <?php echo "".$row['Rate'];?><?php echo "  Stars ";?>
 							
+							<div class="container">
+<div class="cont" style="margin-top:150px;">
+<div class="cont">
+  <div class="stars">
+    <form action="" method="post">
+      <input class="star star-5" id="star-5-2" type="radio" name="star" value="5"/>
+      <label class="star star-5" for="star-5-2"></label>
+      <input class="star star-4" id="star-4-2" type="radio" name="star" value="4"/>
+      <label class="star star-4" for="star-4-2"></label>
+      <input class="star star-3" id="star-3-2" type="radio" name="star" value="3"/>
+      <label class="star star-3" for="star-3-2"></label>
+      <input class="star star-2" id="star-2-2" type="radio" name="star" value="2"/>
+      <label class="star star-2" for="star-2-2"></label>
+      <input class="star star-1" id="star-1-2" type="radio" name="star" value="1"/>
+      <label class="star star-1" for="star-1-2"></label>
+      
+	   </div>
+<Input name="action" type="submit" value="submit_rate">
+    </form>
+ 
+  </div>
+  </div>
+  </div>
                     </div>
             </div>
 
-                  <p><font size="5" color="red"><?php echo "Description: ";?></font></p>
-				<p><font size="3" color="white"><?php echo $row["Description"];?></font></p>
                 
-
 
 			
 				<div class="well">

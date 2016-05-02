@@ -191,6 +191,8 @@ public function Add_Product()
 	{
 	if($_POST['action']=="submit_rate")
 	{
+	$_SESSION["total_rate"]=0;
+	$_SESSION["num_rate"]=0;
 	$rate=$_POST["star"];
 	$name=$_SESSION["name"];
 	$t_r=$_SESSION["total_rate"];
