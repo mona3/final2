@@ -133,11 +133,13 @@ $controller->Add_to_cart();
 					    <p><?php echo "quantity:  ".$row['Num'];?></p>
 					    <p><?php echo "Type:  ".$row['P_Type'];?></p>
 						<p><?php echo "Country:  ".$row['Country'];?></p>
-							<p><font size="5" color="red"><?php echo "Description: ";?></font></p>
-				<p><font size="3" color="white"><?php echo $row["Description"];?></font></p>
-                        </div>
+							
+                    </div>
+            </div>
 
-                      
+                  <p><font size="5" color="red"><?php echo "Description: ";?></font></p>
+				<p><font size="3" color="white"><?php echo $row["Description"];?></font></p>
+                
 
 
 			
@@ -200,8 +202,6 @@ $controller->Add_to_cart();
                             <span class="pull-right">15 days ago</span>
                             <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
                         </div>
-                    </div>
-
                 </div>
 
             </div>
