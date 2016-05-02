@@ -634,38 +634,18 @@ if(isset($_FILES['image']))
 	}
 	
 	 public function search()
- { 
-
+ {
  $error="failed";
  $success="  success";
- 
  if(isset($_POST['action']))
  {
  if($_POST['action']=="search")
  {
  $name=$_POST['term'];
  $result=$this->Product->search($name);
- $_SESSION["Search"]=$name;
-
- /* while ($row = mysqli_fetch_assoc($_SESSION['Search']))
- {
-	 echo $row["Name"];
-	 echo $row["Price"];
- } */
- 	echo "<script>window.location = 'http://localhost/final2/final/search.php' </script>";
-		
  }
  }
  }
- 
-public function Get_Product_info2()
-{ 
-
- $result=$this->Product->search($_SESSION["Search"]);
- return $result;
-
-}
- 
 }
 	
 	

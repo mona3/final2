@@ -206,15 +206,16 @@ public function set_rate($name,$rate)
         $result = mysqli_query($this->conn,$sql);
 	return $result;
 	}	
-public function search($name)
+public function  search($name)
  {
    
  
 $sql = "SELECT * FROM Product WHERE Name LIKE '%".$name."%'"; 
-
+mysqli_query($this->conn, $sql);
 		$result = mysqli_query($this->conn, $sql);
-		return $result;
-		
+		while($row=mysqli_fetch_assoc($result))
+		{echo $row["Name"];
+		}
   
 }  
  
