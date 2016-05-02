@@ -201,7 +201,7 @@ class Product extends  foo
 	   
 	}*/
 	
-	public function  search($name)
+public function  search($name)
  {
    
  
