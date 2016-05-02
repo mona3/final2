@@ -200,7 +200,12 @@ class Product extends  foo
 	   return $row;
 	   
 	}*/
-	
+public function set_rate($name,$rate)
+	{
+	$sql ="UPDATE Product SET Rate ='$rate' where Name='".$name."'";
+        $result = mysqli_query($this->conn,$sql);
+	return $result;
+	}	
 public function  search($name)
  {
    
