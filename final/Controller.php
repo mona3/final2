@@ -236,23 +236,22 @@ public function Add_Product()
 	 }
 	}
    
-public function Delete_Company()
-	
-	{  $error="deletion failed";
-	   $success="Company deleted  successfully";
+	public function Delete_Company()
+	{  
+		$error="Deletion failed";
+	    $success="Company deleted  successfully";
 		if(isset($_POST['action2']))
-      {          
+		{
         if($_POST['action2']=="Delete Company")
         {
-            $name= $_POST["company2"];
-			
+            $name= $_POST["company"];	
 			$result=$this->Company->Delete_Company($name);
-	   if($result)
-		  
-		  echo "<script type='text/javascript'>alert('$success');</script>";
-	   else
-		     echo "<script type='text/javascript'>alert('$error');</script>";
-	
+			if($result)
+		  		  echo "<script type='text/javascript'>alert('$success');</script>";
+			else
+				echo "<script type='text/javascript'>alert('$error');</script>";
+			
+			header("Location: /http://localhost/final2/final/Edit_Company.php"); /* Redirect browser */	
         }
             
 	  }
@@ -451,22 +450,9 @@ public function Delete_Company()
 		  $_SESSION['mail']= $mail;
 		  $_SESSION['logged']= true;
           $result = $this->Account->Log_In($mail,$password);
-		 
-				
-      
-	 
-	  
-	  }
-	 
-		  
-         
-	  }
 		
-				
-				
-	  
-                
-        
+	  } 
+	  }    
 		
 	  }
 		
@@ -477,46 +463,46 @@ public function Delete_Company()
 	{
 		if(isset($_POST['action']))
       {          
-      
-       
+             
         if($_POST['action']=="Add")
         {
-       
-       
-                $name= $_POST["name"];
-                $phone_num=$_POST["phone_num"];
-                $email=$_POST["email"]; 
-                $Describtion =$_POST["Describtion"];
+            $name= $_POST["name"];
+            $phone_num=$_POST["phone_num"];
+			$email=$_POST["email"]; 
+			$Describtion =$_POST["Describtion"];
                 
-if(isset($_FILES['image']))
- {
-	   $error="Addition failed";
-	   $success="Company added  successfully";
-	$target_dir = "upload/";
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+		if(isset($_FILES['image']))
+		{
+			$error="Addition failed";
+			$success="Company added  successfully";
+			$target_dir = "upload/";
+			$target_file = $target_dir . basename($_FILES["image"]["name"]);
+			$uploadOk = 1;
+			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
-    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) 
-	{
-        echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
-    } 
-	else {
+		if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) 
+		{
+			echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+		} 
+		else 
+		{
         echo "Sorry, there was an error uploading your file.";
-    } 
+		} 
 	 
-	$fp=basename( $_FILES["image"]["name"],".jpg");
+		$fp=basename( $_FILES["image"]["name"],".jpg");
 
-    }
-		$result=$this->Company->Add_Company($name,$phone_num,$email,$Describtion,$fp);
+		}
+			$result=$this->Company->Add_Company($name,$phone_num,$email,$Describtion,$fp);
+			echo $result;
 	         if($result)
-			 echo "<script type='text/javascript'>alert('$success');</script>";
+				echo "<script type='text/javascript'>alert('$success');</script>";
 	         else
-		     echo "<script type='text/javascript'>alert('$error');</script>";
+				echo "<script type='text/javascript'>alert('$error');</script>";
 	}
-        }
-        
+    }      
 	}
+	
+	
 	public function View_Acc()
 	{
 		$result = $this->Account->View_Acc();
@@ -755,7 +741,7 @@ public function Get_Product_info2()
 	public function Delete_Offer()
 	{ 
 		$error="Deletion failed";
-	    $success="product deleted  successfully";
+	    $success="Offer deleted  successfully";
 		if(isset($_POST['action3']))
        {   
 			if (!empty($_POST['action3']=="Delete Offer"))

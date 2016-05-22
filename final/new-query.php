@@ -351,7 +351,7 @@ class Company extends  foo
 	
 	public function Add_Company($Name,$Phone_Num,$Email,$Describtion,$img)
 	{ 
-		
+			echo $Name; echo $Phone_Num; echo $Email; echo $Describtion;
             $sql = "INSERT INTO Company (Name,Phone_Num,Email,description,img  ) Values ('$Name'  ,'$Phone_Num','$Email','$Describtion','$img' )";
             $result = mysqli_query($this->conn, $sql);
 		     

@@ -375,8 +375,8 @@ $controller->Delete_Offer();
                             </select>
 							</div>
                         </div>
-						   <button name="action2" dir="rtl" type="submit" class="btn btn-primary" value="Delete Company" >Delete </button>
-						   <button name="action2"   dir="rtl" type="submit" class="btn btn-primary"value="Edit Company" >Edit </button>
+						   <button name="action2" dir="rtl" type="submit" class="btn btn-primary" value="Delete Company" >Delete</button>
+						   <button name="action2"   dir="rtl" type="submit" class="btn btn-primary"value="Edit Company" >Edit</button>
                            </form >
                                        
                                     </div>
@@ -438,8 +438,8 @@ $controller->Delete_Offer();
                            </select>
 
                            </div>
-						   <button  name="action" dir="rtl" type="submit" class="btn btn-primary" value="Delete Product" >Delete </button>
-   	                     <button   name="action" dir="rtl" type="submit" class="btn btn-primary" value="Edit Product"  >Edit </button>
+						   <button  name="action" dir="rtl" type="submit" class="btn btn-primary" value="Delete Product" >Delete</button>
+   	                     <button   name="action" dir="rtl" type="submit" class="btn btn-primary" value="Edit Product"  >Edit</button>
                          
 				   
 						   
