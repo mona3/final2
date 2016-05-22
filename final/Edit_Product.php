@@ -29,7 +29,17 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style>
+			body {
+            background: url('36.jpg') no-repeat top;
+            background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+            color :purple;
+            background-attachment:scroll;
+            background-position:top;
 
+        }
+    </style>
 </head>
 
 <body>
@@ -43,7 +53,7 @@ session_start();
 
 ?>
 
-    <div id="wrapper">
+    <div class="pull-left">
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -55,7 +65,7 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
+                <a class="navbar-brand" href="Admin2.php">SB Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -209,18 +219,18 @@ session_start();
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
+                            Editing Product 					<!--<small>Statistics Overview</small>-->
                         </h1>
-                        <ol class="breadcrumb">
+<!--                        <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> Dashboard
                             </li>
-                        </ol>
+                        </ol>-->	
                     </div>
                 </div>
                 <!-- /.row -->
 
-                <div class="row">
+   <!--             <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -232,7 +242,7 @@ session_start();
 
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
+                        <div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
@@ -240,7 +250,7 @@ session_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">26</div>
-                                         <div>New Offer</div>
+                                        <div><a href="Add_Offers.php">New Offer</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +272,7 @@ session_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">12</div>
-                                        <div>New Company</div>
+                                        <div><a href="Add_Company.php">New Company</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +294,7 @@ session_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">124</div>
-                                        <div>New Product</div>
+                                        <div><a href="Add_Product.php">New Product</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -305,26 +315,36 @@ session_start();
 <?php
 $controller->Edit_Product();
 $row=$controller->view_E_Product();
-
-
-
 ?>
-		
-		
-        <h2>Edite_product</h2>
+
+				<div   class="col-lg-3">
+							<div ></div>
+
+				  <div class="panel panel-yellow" 	>
+                            <div class="panel-heading">
+                                <h3 > Edit Product</h3>
+								
+                            </div>
+							</div>
+							</div>
+							<br/><br/><br/>
+					<br/><br/>
+
+	
+<!--        <h2>Edite_product</h2>-->
 		<form action="" method="post" enctype="multipart/form-data">
-			<h2><input name="name" type="text" class="name" placeholder="name" required="" value=<?php echo $row["Name"];?>></h2>
-			<h2><input name="price" type="text" class="name" placeholder="price" required="" value=<?php echo $row["Price"];?>></h2>
-			<h2><input name="quantity" type="text" class="name" placeholder="quantity" required="" value=<?php echo $row["Num"];?>></h2>
-			<h2><input name="type" type="text" class="name" placeholder="type" required=""value=<?php echo $row["P_Type"];?>></h2>
-			<h2><input name="description" type="text" class="name" placeholder="description" required=""value=<?php echo $row["Description"];?>></h2>
-			<h2><input name="country" type="text" class="name" placeholder="country" required=""value=<?php echo $row["Country"];?>></h2>
-            <h2><input name="image" id="image" accept="image/JPEG" type="file" required=""><br /><br /><h2>
+			<h3><input name="name" type="text" class="name" placeholder="name" required="" value=<?php echo $row["Name"];?>></h3>
+			<h3><input name="price" type="text" class="name" placeholder="price" required="" value=<?php echo $row["Price"];?>></h3>
+			<h3><input name="quantity" type="text" class="name" placeholder="quantity" required="" value=<?php echo $row["Num"];?>></h3>
+			<h3><input name="type" type="text" class="name" placeholder="type" required=""value=<?php echo $row["P_Type"];?>></h3>
+			<h3><input name="description" type="text" class="name" placeholder="description" required=""value=<?php echo $row["Description"];?>></h3>
+			<h3><input name="country" type="text" class="name" placeholder="country" required=""value=<?php echo $row["Country"];?>></h3>
+            <h3><input name="image" id="image" accept="image/JPEG" type="file" required=""><h3>
 			<div class="clear"></div>
 
 		
        
-	   <h2> <select name="company" class="pull-Left" >
+	   <h3> <select name="company" class="pull-Left" >
          <optgroup  label="Company">
 <?php                                  
    $result=$controller->View_Company();
@@ -346,10 +366,10 @@ $row=$controller->view_E_Product();
     }
  ?>  
           </optgroup> 
-        </select> </h2>
+        </select> </h3>
        
-			
-			<h2><input name="action" type="submit" value="Edit"></h2>
+			</br></br>
+			<h3><input name="action" type="submit" value="Edit"></h3>
 		</form>
 		
              

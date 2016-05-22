@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-k
+
 <head>
 
     <meta charset="utf-8">
@@ -30,6 +30,19 @@ k
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+	        <style>
+			body {
+            background: url('36.jpg') no-repeat ;
+            background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+            color:purple;
+            background-attachment:scroll;
+            background-position:top;
+        }
+</style>
+	
+	
+	
 </head>
 
 <body>
@@ -38,7 +51,7 @@ include("Controller.php");
 $controller=new controller();
 ?>
 
-    <div id="wrapper">
+    <div  class="pull-left">
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -50,7 +63,7 @@ $controller=new controller();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
+                <a class="navbar-brand" href="Admin2.php">SB Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -153,50 +166,15 @@ $controller=new controller();
                     </ul>
                 </li>
             </ul>
-           <!-- <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <!--<div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>-->
-        <!--            <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>-->-->
-                 <!--       <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>-->
-           <!--         <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
-                </ul>
-            </div>
+			
+			
+			
+			
+			
             <!-- /.navbar-collapse -->
-        </nav>-->
+        </nav>
 
-        <div id="page-wrapper">
+        <div id="page-wrapper"  >
 
             <div class="container-fluid">
 
@@ -204,30 +182,30 @@ $controller=new controller();
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
+                            Adding Product		<!-- <small>Statistics Overview</small>-->
                         </h1>
-                        <ol class="breadcrumb">
+<!--                        <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> Dashboard
                             </li>
-                        </ol>
+                        </ol>-->
                     </div>
                 </div>
                 <!-- /.row -->
 
-                <div class="row">
+<!--                <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- /.row -->
 
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
+                        <div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
@@ -235,7 +213,7 @@ $controller=new controller();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">26</div>
-                                         <div>New Offer</div>
+										   <div><a href="Add_Offers.php">New Offer</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -257,7 +235,7 @@ $controller=new controller();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">12</div>
-                                        <div>New Company</div>
+										<div><a href="Add_Company.php">New Company</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +248,7 @@ $controller=new controller();
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+<!--                    <div class="col-lg-3 col-md-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
@@ -292,25 +270,43 @@ $controller=new controller();
                             </a>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
         <div class="container">
-        <h2>Add_product</h2>
+		
+
+		<!--class="col-sm-3"-->
+		<br/><br/><br/><br/>
+				<br/><br/><br/><br/>
+							<div   class="col-lg-3">
+							<div ></div>
+							
+							
+		                     <div class="panel panel-yellow" 	>
+                            <div class="panel-heading">
+                                <h3 > Add Product</h3>
+                            </div>
+							</div>
+							</div>
+							<br/><br/><br/>
+							<br/><br/>
+							
+<!--        <h2>Add_product</h2>-->
 		<form action="" method="post"   enctype="multipart/form-data" >
-			<h2><input name="name" type="text" class="name" placeholder="name" required=""></h2>
-			<h2><input name="price" type="text" class="name" placeholder="price" required=""></h2>
-			<h2><input name="quantity" type="text" class="name" placeholder="quantity" required=""></h2>
-			<h2><input name="type" type="text" class="name" placeholder="type" required=""></h2>
-			<h2><input name="description" type="text" class="name" placeholder="description" required=""></h2>
-			<h2><input name="countery" type="text" class="name" placeholder="countery" required=""></h2>
+			<h3><input name="name" type="text" class="name" placeholder="name" required=""></h3>
+			<h3><input name="price" type="text" class="name" placeholder="price" required=""></h3>
+			<h3><input name="quantity" type="text" class="name" placeholder="quantity" required=""></h3>
+			<h3><input name="type" type="text" class="name" placeholder="type" required=""></h3>
+			<h3><input name="description" type="text" class="name" placeholder="description" required=""></h3>
+			<h3><input name="countery" type="text" class="name" placeholder="countery" required=""></h3>
            <!-- <h2><input type="file" name="imageUpload" id="imageUpload"></h2>-->
-			<h2><input name="image" id="image" accept="image/JPEG" type="file" required=""><br /><br /><h2>
+			<h3><input name="image" id="image" accept="image/JPEG" type="file" required=""><h3>
 
 			<div class="clear"></div>
 
 		
        
-	   <h2> <select name="company" class="pull-Left">
+	   <h3> <select name="company" class="pull-Left">
          <optgroup  label="Company">
 <?php                                  
    $result=$controller->View_Company();
@@ -332,10 +328,10 @@ $controller=new controller();
     }
  ?>  
           </optgroup> 
-        </select> </h2>
+        </select> </h3>
        
 			
-			<h2><input name="action" type="submit" value="Add"></h2>
+			<h3><input name="action" type="submit" value="Add"></h3>
 		</form>
 		
              

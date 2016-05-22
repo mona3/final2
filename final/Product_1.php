@@ -105,29 +105,31 @@ label.star:before {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Home.html">Home</a>
+                <a class="navbar-brand" href="home2.php">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="view account.php"><?php echo $Username;?></a>
+                        <a href="Sign_up.php">Sign up</a>
                     </li>
-					
                     <li>
-                        <a href="Login.php">Logout</a>
+                        <a href="Login.php">Login</a>
                     </li>
 
                     <li>
                         <a href="Acc_Inf.php">About</a>
                     </li>
                     <li>
-                        <a href="#">Posts</a>
-                    </li>
-                    <li>
                         <a href="Offers.php">Offers</a>
                     </li>
-                </ul>
+                	<li>
+                        <a href="Order.php">My Cart</a>
+                    </li>
+					
+					
+					
+               </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -135,20 +137,51 @@ label.star:before {
     </nav>
 
     <!-- Page Content -->
+      <!-- Page Content -->
     <div class="container">
-                        
 
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Other Products</p>
+	
+
+             <p class="lead">plumbing Products</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item active">Product 2</a>
-                    <a href="#" class="list-group-item">Product 3</a>
-                    <a href="#" class="list-group-item">Product 4</a>
-                    <a href="#" class="list-group-item">Product 5</a>
+				
+				
+				
+           <?php 
+        $result=$controller->View_Products();
+     if (mysqli_num_rows($result) > 0) 
+     {
+    // output data of each row
+  
+    while($row = mysqli_fetch_assoc($result))
+
+    
+         {?>
+         <a href="Product_1.php?content=<?php echo $row["Name"];?>" class="list-group-item"><?php echo $row["Name"]; $SESSION['img2']=$row["Name"];?></a>
+							
+<?php						
+      }
+    } 
+
+    else 
+    {
+      echo "0 results";
+    }
+ ?>  
+
                 </div>
             </div>
+
+
+			
+			
+<!------------------------------------------------------------------------------>
+
+
+
 <?php 
 $row=$controller->View_s_Product();
 

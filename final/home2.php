@@ -413,7 +413,7 @@ $controller=new controller();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Home2.php">Home</a>
+                <a class="navbar-brand" href="home2.php">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -433,17 +433,12 @@ $controller=new controller();
                         <a href="Acc_Inf.php">About</a>
                     </li>
                     <li>
-                        <a href="#">Posts</a>
-                    </li>
-                    <li>
                         <a href="Offers.php">Offers</a>
                     </li>
-                    <li>
-                        <a href="Gallery.php">Galleries</a>
-                    </li>
-					<li>
+                	<li>
                         <a href="Order.php">My Cart</a>
-                     </li>
+                    </li>
+					
                         <a>
                         <li>
  
@@ -468,7 +463,7 @@ $controller=new controller();
         </div>
         <!-- /.container -->
     </nav>
-
+<br/>  <br/> 
     <!-- Page Content -->
     <div class="container">
 

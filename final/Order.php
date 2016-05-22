@@ -81,30 +81,25 @@ $Username = $controller->get_UserName();
 
             <!-- Header -->
                 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="view account.php"><?php echo $Username;?></a>
+                        <a href="Sign_up.php">Sign up</a>
                     </li>
                     <li>
-                        <a href="Login.php">Logout</a>
+                        <a href="Login.php">Login</a>
                     </li>
 
                     <li>
                         <a href="Acc_Inf.php">About</a>
                     </li>
                     <li>
-                        <a href="Order.php">Orders</a>
-                    </li>
-                    <li>
                         <a href="Offers.php">Offers</a>
                     </li>
-                    <li>
-                        <a href="Gallery.php">Galleries</a>
+                	<li>
+                        <a href="Order.php">My Cart</a>
                     </li>
-
-
-                </ul>
+               </ul>
             </div>
 
 

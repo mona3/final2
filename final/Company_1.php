@@ -39,27 +39,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Home2.php">Home</a>
+               <a class="navbar-brand" href="home2.php">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="Sign_up.html">Sign up</a>
+                        <a href="Sign_up.php">Sign up</a>
                     </li>
                     <li>
-                        <a href="Login.html">Login</a>
+                        <a href="Login.php">Login</a>
                     </li>
 
                     <li>
-                        <a href="Acc_Inf.html">About</a>
+                        <a href="Acc_Inf.php">About</a>
                     </li>
                     <li>
-                        <a href="#">Posts</a>
+                        <a href="Offers.php">Offers</a>
                     </li>
-                    <li>
-                        <a href="Offers.html">Offers</a>
+                	<li>
+                        <a href="Order.php">My Cart</a>
                     </li>
+	
+	
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

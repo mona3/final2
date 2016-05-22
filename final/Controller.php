@@ -108,7 +108,8 @@ public  function my_is_int($var)
 }
 
 public function Add_Product()
-	{  $error="adding product failed";
+	{  
+	   $error="adding product failed";
 	   $success="product is added  successfully";
 	   $valid="price must be a number or quantity must be an integer number  ";
 		if(isset($_POST['action']))
@@ -117,15 +118,15 @@ public function Add_Product()
         {  
 	 
 	
-	
                 $name= $_POST["name"];
+				$description=$_POST["description"];
                 $price= $_POST["price"];
                 $quantity=$_POST["quantity"]; 
-		$type=$_POST["type"];
-		$description=$_POST["description"];
-		$countery=$_POST["countery"];
-		$company=$_POST["company"];
-        $result1=$this->Company->Get_Company_Id($company);
+//				$Rate=$_POST[""]; 
+				$type=$_POST["type"];		
+				$countery=$_POST["countery"];
+				$company=$_POST["company"];	
+				$result1=$this->Company->Get_Company_Id($company);
 		
 	
 	
@@ -478,7 +479,7 @@ public function Delete_Company()
       {          
       
        
-        if($_POST['action']=="Add_c")
+        if($_POST['action']=="Add")
         {
        
        
