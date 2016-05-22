@@ -29,12 +29,24 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	
+	<style>
+			body {
+            background: url('36.jpg') no-repeat ;
+            background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+            color:green;
+            background-attachment:scroll;
+            background-position:top;
+        }
+</style>
 
 </head>
 
 <body>
 
-    <div id="wrapper">
+<div  class="pull-left">
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -46,7 +58,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
+                <a class="navbar-brand" href="Admin2.php">SB Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -190,9 +202,9 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-        </nav>-->
+        </nav>
 
-        <div id="page-wrapper">
+		<div id="page-wrapper">
 
             <div class="container-fluid">
 
@@ -200,30 +212,30 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
+                            Adding Company
                         </h1>
-                        <ol class="breadcrumb">
+<!--                        <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> Dashboard
                             </li>
-                        </ol>
+                        </ol>-->
                     </div>
                 </div>
                 <!-- /.row -->
 
-                <div class="row">
+      <!--          <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- /.row -->
 
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
+                        <div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
@@ -232,7 +244,7 @@
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">26</div>
-                                          <div>New Offer</div>
+                                        <div><a href="Add_Offers.php">New Offer</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +257,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+<!--                    <div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
@@ -266,7 +278,7 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
@@ -276,7 +288,7 @@
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">124</div>
-                                        <div>New Product</div>
+                                        <div><a href="Add_Product.php">New Product</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -292,16 +304,28 @@
                 </div>
 
                 <div class="container">
-        <h2>Add_company</h2>
+				<div   class="col-lg-3">
+							<div ></div>
+
+				  <div class="panel panel-green" 	>
+                            <div class="panel-heading">
+                                <h3 > Add Company</h3>
+								
+                            </div>
+							</div>
+							</div>
+							<br/><br/><br/>
+					<br/><br/>
+<!--        <h2>Add_company</h2>-->
 		<form action="" method="post" enctype="multipart/form-data">
-			<h2><input name="name" type="text" class="name" placeholder="name" required=""></h2>
-			<h2><input name="Describtion" type="text" class="Describtion" placeholder="Describtion" required=""></h2>
-			<h2><input name="email" type="text" class="Email address" placeholder="Email address" required=""></h2>
-			<h2><input name="phone_num" type="text" class="Phone Number" placeholder="Phone Number" required=""></h2>
-			<h2><input name="image" id="image" accept="image/JPEG" type="file" required=""><br /><br /></h2>
+			<h3><input name="name" type="text" class="name" placeholder="name" required=""></h3>
+			<h3><input name="Describtion" type="text" class="Describtion" placeholder="Describtion" required=""></h3>
+			<h3><input name="email" type="text" class="Email address" placeholder="Email address" required=""></h3>
+			<h3><input name="phone_num" type="text" class="Phone Number" placeholder="Phone Number" required=""></h3>
+			<h3><input name="image" id="image" accept="image/JPEG" type="file" required=""></h3>
 			<div class="clear"></div>
 	
-			<h2><input name="action" type="submit" value="Add_c"></h2>
+			<h3><input name="action" type="submit" value="Add"></h3>
 
 		</form>
 	</div>

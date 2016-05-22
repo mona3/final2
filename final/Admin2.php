@@ -23,27 +23,20 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 	    <style>
-		    body {
+        body {
             background: url('36.jpg') no-repeat top;
             background-size: cover;
             font-family: 'Open Sans', sans-serif;
             color :red;
             background-attachment:scroll;
             background-position:top;
-			}
-	    </style>
+
+        }
+    </style>
 
 
-
-
+ 
 </head>
 
 <body>
@@ -71,8 +64,9 @@ session_start();
                 <a class="navbar-brand" href="Admin2.php">SB Admin</a>
             </div>
 			
-			            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
+			
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav" >
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
                     <ul class="dropdown-menu message-dropdown">
@@ -91,6 +85,7 @@ session_start();
                                 </div>
                             </a>
                         </li>
+						
                         <li class="message-preview">
                             <a href="#">
                                 <div class="media">
@@ -106,6 +101,7 @@ session_start();
                                 </div>
                             </a>
                         </li>
+						
                         <li class="message-preview">
                             <a href="#">
                                 <div class="media">
@@ -121,12 +117,15 @@ session_start();
                                 </div>
                             </a>
                         </li>
+						
                         <li class="message-footer">
                             <a href="#">Read All New Messages</a>
                         </li>
                     </ul>
                 </li>
-                
+            
+
+			
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -146,69 +145,30 @@ session_start();
                     </ul>
                 </li>
             </ul>
-           <!-- <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <!--<div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>-->
-        <!--            <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>-->
-                 <!--       <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>-->
-           <!--         <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </nav>
 
         <div id="page-wrapper">
+			<div class="container-fluid">
 
-            <div class="container-fluid">
+			
+			
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Adding	- Editing - Deletion
+                            Adding	- Editing - Deletion				<!-- <small>Statistics Overview</small>-->
                         </h1>
 <!--                        <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
+                                <i class="fa fa-dashboard"></i> Adding
                             </li>
                         </ol>-->
                     </div>
                 </div>
                 <!-- /.row -->
 
-  <!--              <div class="row">
+<!--                <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -218,6 +178,9 @@ session_start();
                 </div>
                 <!-- /.row -->
 
+				
+				
+				
 				
 				<!--Add Offer -->
                 <div class="row">
@@ -271,7 +234,7 @@ session_start();
 					
 					
 					<!--Add Product-->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6" >
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
@@ -287,17 +250,17 @@ session_start();
                       
                             <a href="#">
                                 <div class="panel-footer">
-                              
-                                   
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>                                                                 
                                     <div class="clearfix"></div>
                                 </div>
                             </a>
                         </div>
+                    </div>                                             
                     </div>
+
+
                     
-                    </div>
-
-
 <!--  Offer-->			
 
 					<div class="col-lg-3 col-md-6">
@@ -359,21 +322,20 @@ $controller->Delete_Offer();
 
 
 					
+					
+<!--  Company-->					
 
-
-
-
-
-
-<!--Company-->					
+     
+					
 					<div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
+                                      <i class="fa fa-tasks fa-5x"></i>
                                         
                                     </div>
-							<div class="col-xs-9 text-right">
+                        <div class="col-xs-9 text-right">
                             <div>
 							 <div class="col-xs-13 text-right">
                                         <div class="h2">Company</div>
@@ -382,9 +344,10 @@ $controller->Delete_Offer();
 						   <div class="col-xs-3 text-right">
                             <select name="company" class="pull-right">
                                 <optgroup label="Company">
-                                  
-<?php 
 
+                                   
+<?php 
+		$controller->Delete_Company();
    $result=$controller->View_Company();
      if (mysqli_num_rows($result) > 0) 
      {
@@ -402,35 +365,36 @@ $controller->Delete_Offer();
     {
       echo "0 results";
     }
-	$controller->Delete_Company();
 
 
- ?>                    
+
+ ?>      
+
+ 
 							   </optgroup>
                             </select>
 							</div>
                         </div>
-						   <button name="action2" dir="rtl" type="submit" class="btn btn-primary" value="Delete Company" >Delete</button>
-						   <button name="action2"   dir="rtl" type="submit" class="btn btn-primary"value="Edit Company" >Edit</button>
+						   <button name="action2" dir="rtl" type="submit" class="btn btn-primary" value="Delete Company" >Delete </button>
+						   <button name="action2"   dir="rtl" type="submit" class="btn btn-primary"value="Edit Company" >Edit </button>
                            </form >
                                        
                                     </div>
                                                       
-                            
-                             
+                                                   
                         </div>
                     </div>
-					</div>
+					</div>
 					</div>
 					
-<!--Product-->					
-                       
+					
+                 <!--Product-->      
                         <div class="col-lg-3 col-md-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                       <i class="fa fa-shopping-cart fa-5x"></i>                                        
+                                        <i class="fa fa-shopping-cart fa-5x"></i>                                        
                                     </div>
                                     
                        <div class="col-xs-9 text-right">
@@ -446,7 +410,7 @@ $controller->Delete_Offer();
                                 <optgroup label="Product">
                                    
 <?php    
-$controller->Delete_Product();                              
+	$controller->Delete_Product();                           
    $result=$controller->Get_Product_Names();
      if (mysqli_num_rows($result) > 0) 
      {
@@ -467,11 +431,12 @@ $controller->Delete_Product();
 	
     $controller->Get_Product_Id();
 	$controller->Get_Company_Name();
-		$controller->Get_Offer_Name();
+	$controller->Get_Offer_Name();
 
- ?>                    
-				   </optgroup>
+ ?>               
+						   </optgroup>
                            </select>
+
                            </div>
 						   <button  name="action" dir="rtl" type="submit" class="btn btn-primary" value="Delete Product" >Delete </button>
    	                     <button   name="action" dir="rtl" type="submit" class="btn btn-primary" value="Edit Product"  >Edit </button>
@@ -493,8 +458,6 @@ $controller->Delete_Product();
                     </div>
                 </div>
 
-               
-         
                
                   
 

@@ -289,7 +289,7 @@ public function Delete_Company()
         {
             $name= $_POST["company"];			
 			$_SESSION['Company']=$name;
-	        echo "<script>window.location = 'http://localhost/final/final2/Edit_Company.php' </script>";
+	        echo "<script>window.location = 'http://localhost/final2/final/Edit_Company.php' </script>";
 		
 	    }
 	  }
@@ -640,6 +640,7 @@ if(isset($_FILES['image']))
 
  $error="failed";
  $success="  success";
+
  
  if(isset($_POST['action']))
  {

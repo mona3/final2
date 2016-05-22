@@ -347,7 +347,7 @@ $controller->Delete_Offer();
 
                                    
 <?php 
-
+		$controller->Delete_Company();
    $result=$controller->View_Company();
      if (mysqli_num_rows($result) > 0) 
      {
@@ -365,7 +365,7 @@ $controller->Delete_Offer();
     {
       echo "0 results";
     }
-	$controller->Delete_Company();
+
 
 
  ?>      
