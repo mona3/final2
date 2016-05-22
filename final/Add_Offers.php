@@ -23,21 +23,29 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <style>
+			body {
+            background: url('36.jpg') no-repeat ;
+            background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+            color:red;
+            background-attachment:scroll;
+            background-position:top;
 
+        }
+		</style>
 </head>
 
 <body>
+<?php
+include("Controller.php");
+$controller=new controller();
+?>
 
-    <div id="wrapper">
+    <div  class="pull-left"  >
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -46,7 +54,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
+				<a class="navbar-brand" href="Admin2.php">SB Admin</a>
+
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -149,68 +158,31 @@
                     </ul>
                 </li>
             </ul>
-           <!-- <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <!--<div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>-->
-        <!--            <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>-->-->
-                 <!--       <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>-->
-           <!--         <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
-                </ul>
-            </div>
+			
+			
+			
             <!-- /.navbar-collapse -->
-        </nav>-->
+        </nav>
 
-        <div id="page-wrapper">
-
+        <div id="page-wrapper" >
+			<div  >
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <div class="row">
+                <div class="row" >
                     <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
+                        <h1 class="page-header"  >
+                            Adding Offer
                         </h1>
-                        <ol class="breadcrumb">
+                   <!--     <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> Dashboard
                             </li>
-                        </ol>
+                        </ol>		-->
                     </div>
                 </div>
                 <!-- /.row -->
-
+<!--
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
@@ -221,23 +193,19 @@
                 </div>
                 <!-- /.row -->
 
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
+                <div class="row" >
+<!--                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                          <img class="col" src="11.jpg" alt="">
+                                       <img class="col" src="11.jpg" alt="">
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">26</div>
-                                        <div>New  Offer</div>
+                                        <div><a href="Add_Offer.php">New Offer</a></div>
                                     </div>
                                 </div>
-                         
-                          
-                                
-                          
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
@@ -245,11 +213,11 @@
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
+                            </a>''
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
+                    </div>-->
+                    <div class="col-lg-3 col-md-6"  >
+                        <div class="panel panel-green" >
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
@@ -257,7 +225,7 @@
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">12</div>
-                                        <div>New Company</div>
+                                        <div><a href="Add_Company.php">New Company</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +247,7 @@
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">124</div>
-                                        <div>New Product</div>
+                                        <div><a href="Add_Product.php">New Product</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -294,18 +262,70 @@
                     </div>
                 </div>
 
-                <div class="container">
-        <h2>Add_Offer</h2>
-		<form>
-			<h2><input name="price"     type="text" placeholder="new_price" required=""></h2>
-			<h2><input name="description" type="text" placeholder="description" required=""></h2>
-			<h2><input name="precentage" type="text" placeholder="precentages" required=""></h2>
-			<h2><input name="date_end" type="text" placeholder="date_end" required=""></h2>
-			<h2><input name="date_start" type="text" placeholder="date_start" required=""></h2>
+
+        <div class="container">
+		<!--class="col-sm-3"-->
+		<br/>
+							<div   class="col-lg-2">
+							<div ></div>
+							
+							
+		                     <div class="panel panel-red" 	>
+                            <div class="panel-heading">
+                                <h3 > Add Offer</h3>
+                            </div>
+							</div>
+							</div>
+							<br/><br/><br/>
+							<br/><br/>
+
+		    <form action="" method="post" enctype="multipart/form-data">
+			<h3><input name="Name" type="text" class="Name" placeholder="Name" required=""></h3>
+			<h3 ><input name="Description" type="text" class="Description" placeholder="Description" required=""></h3>
+			<h3><input name="Price_After" type="text" class="Price_After" placeholder="Price_After" required=""></h3>
+			<h3><input name="Precentage" type="text" class="Precentage" placeholder="Precentage" required=""></h3>
+			<h3><input name="Start_date" type="text" class="Start_date" placeholder="Start_date" required=""></h3>
+			<h3><input name="End_date" type="text" class="End_date" placeholder="End_date" required=""></h3>
+		           <!-- <h2><input type="file" name="imageUpload" id="imageUpload"></h2>-->
+<!--			<h2><input name="image" id="image" accept="image/JPEG" type="file" required=""><br /><br /><h2>-->
+
 			<div class="clear"></div>
-			<h2><input type="submit" value="Add"></h2>
+
+		
+	   <h3> <select name="product" class="pull-Left">
+         <optgroup  label="product">
+<?php                                  
+   $result=$controller->View_Products();
+     if (mysqli_num_rows($result) > 0) 
+     {
+    // output data of each row
+         while($row = mysqli_fetch_assoc($result))
+  
+    
+         {?>
+          <option >  <?php echo  $row["Name"]; ?> </option>
+ <?php						
+         }		 
+
+     } 
+
+    else 
+    {
+      echo "0 results";
+    }
+ ?>  
+          </optgroup> 
+        </select> </h3>
+       
+			
+			<h3><input name="action" type="submit" value="Add" ></h3>
 		</form>
+		
+             
 	</div>
+<?php
+$controller->Add_Offer();
+?>
 	<div class="footer">
 		
 	</div>
