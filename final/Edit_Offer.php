@@ -23,27 +23,19 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-	    <style>
-		    body {
+	
+<style>
+			body {
             background: url('36.jpg') no-repeat top;
             background-size: cover;
             font-family: 'Open Sans', sans-serif;
             color :red;
             background-attachment:scroll;
             background-position:top;
-			}
-	    </style>
 
-
-
-
+        }
+    </style>
 </head>
 
 <body>
@@ -51,14 +43,16 @@
 include("Controller.php");
 $controller=new controller();
 
+
 session_start();
+//header("Location: http://localhost/888/admin2.php"); /* Redirect browser */	
+
 ?>
 
-    <div  class="pull-left" >
-	
+    <div class="pull-left">
 
         <!-- Navigation -->
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -67,11 +61,9 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-				
                 <a class="navbar-brand" href="Admin2.php">SB Admin</a>
             </div>
-			
-			            <!-- Top Menu Items -->
+            <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
@@ -126,7 +118,33 @@ session_start();
                         </li>
                     </ul>
                 </li>
-                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -146,46 +164,10 @@ session_start();
                     </ul>
                 </li>
             </ul>
-           <!-- <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <!--<div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>-->
-        <!--            <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>-->
-                 <!--       <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>-->
-           <!--         <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
-                </ul>
-            </div>
+			
+			
+			
+			
             <!-- /.navbar-collapse -->
         </nav>
 
@@ -197,18 +179,18 @@ session_start();
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Adding	- Editing - Deletion
+                            Editing Offer 
                         </h1>
 <!--                        <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> Dashboard
                             </li>
-                        </ol>-->
+                        </ol>
                     </div>
-                </div>
+                </div>-->
                 <!-- /.row -->
 
-  <!--              <div class="row">
+<!--                <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -218,8 +200,6 @@ session_start();
                 </div>
                 <!-- /.row -->
 
-				
-				<!--Add Offer -->
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-red">
@@ -230,7 +210,7 @@ session_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">26</div>
-                                        <div><a href="Add_Offers.php">New Offer</a></div>
+                                        <div><a href="Add_Offer.php">New Offer</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -243,9 +223,6 @@ session_start();
                             </a>
                         </div>
                     </div>
-					
-					
-					<!--Add Company-->
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
@@ -268,9 +245,6 @@ session_start();
                             </a>
                         </div>
                     </div>
-					
-					
-					<!--Add Product-->
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
@@ -280,225 +254,97 @@ session_start();
                                     </div>
                                     <div class="col-xs-9 text-right">
                                         <div class="huge">124</div>
-                                       <div> <a href="Add_Product.php">New Product</a> </div>
+                                        <div><a href="Add_Product.php">New Product</a></div>
                                     </div>
                                 </div>
                             </div>
-                      
                             <a href="#">
                                 <div class="panel-footer">
-                              
-                                   
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    
-                    </div>
-
-
-<!--  Offer-->			
-
-					<div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-										<img class="col" src="11.jpg" alt="">
-
-									
-                                    </div>
-                        <div class="col-xs-9 text-right">
-                            <div>
-							 <div class="col-xs-13 text-right">
-                                        <div class="h2">Offer</div>
-										</div>
-                   
-
-                           <form action="" method="post">
-						   <div class="col-xs-3 text-left">
-                            <select name="Offer" class="pull-right" >
-                                <optgroup label="Offer" >
-                                   
-<?php    
-$controller->Delete_Offer();                              
-   $result=$controller->View_Offer();
-     if (mysqli_num_rows($result) > 0) 
-     {
-    // output data of each row
-         while($row = mysqli_fetch_assoc($result))
-  
-    
-         {?>
-          <option >  <?php echo  $row["Name"]; ?> </option>
-   <?php						
-         }
-     } 
-
-    else 
-    {
-      echo "0 results";
-    }
-	
- ?>               
-						</optgroup>
-                            </select>
-							</div>
-                        </div >
-						   <button name="action3" dir="rtl"  type="submit" class="btn btn-primary" value="Delete Offer">Delete </button>
-						   <button name="action3"   dir="rtl" type="submit" class="btn btn-primary"value="Edit Offer" >Edit </button>
-                           </form >
-                                       
-                                    </div>
-                                                                              
-                        </div>
-                    </div>
-					</div>
-					</div>
-
-
-					
-
-
-
-
-
-
-<!--Company-->					
-					<div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        
-                                    </div>
-							<div class="col-xs-9 text-right">
-                            <div>
-							 <div class="col-xs-13 text-right">
-                                        <div class="h2">Company</div>
-										</div>
-                           <form action="" method="post" >
-						   <div class="col-xs-3 text-right">
-                            <select name="company" class="pull-right">
-                                <optgroup label="Company">
-                                  
-<?php 
-
-   $result=$controller->View_Company();
-     if (mysqli_num_rows($result) > 0) 
-     {
-    // output data of each row
-         while($row = mysqli_fetch_assoc($result))
-  
-    
-         {?>
-          <option >  <?php echo  $row["Name"]; ?> </option>
-   <?php						
-         }
-     } 
-
-    else 
-    {
-      echo "0 results";
-    }
-	$controller->Delete_Company();
-
-
- ?>                    
-							   </optgroup>
-                            </select>
-							</div>
-                        </div>
-						   <button name="action2" dir="rtl" type="submit" class="btn btn-primary" value="Delete Company" >Delete</button>
-						   <button name="action2"   dir="rtl" type="submit" class="btn btn-primary"value="Edit Company" >Edit</button>
-                           </form >
-                                       
-                                    </div>
-                                                      
-                            
-                             
-                        </div>
-                    </div>
-					</div>
-					</div>
-					
-<!--Product-->					
-                       
-                        <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-yellow">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                       <i class="fa fa-shopping-cart fa-5x"></i>                                        
-                                    </div>
-                                    
-                       <div class="col-xs-9 text-right">
-                            <div>
-							 <div class="col-xs-13 text-right">
-                                        <div class="h2">Product</div>
-										</div>
-	
-                           <form action="" method="post">
-						   <div class="col-xs-3 text-right">
-                       
-                            <select name="Product" class="pull-right">
-                                <optgroup label="Product">
-                                   
-<?php    
-$controller->Delete_Product();                              
-   $result=$controller->Get_Product_Names();
-     if (mysqli_num_rows($result) > 0) 
-     {
-    // output data of each row
-         while($row = mysqli_fetch_assoc($result))
-  
-    
-         {?>
-          <option >  <?php echo  $row["Name"]; ?> </option>
-   <?php						
-         }
-     } 
-
-    else 
-    {
-      echo "0 results";
-    }
-	
-    $controller->Get_Product_Id();
-	$controller->Get_Company_Name();
-		$controller->Get_Offer_Name();
-
- ?>                    
-				   </optgroup>
-                           </select>
-                           </div>
-						   <button  name="action" dir="rtl" type="submit" class="btn btn-primary" value="Delete Product" >Delete </button>
-   	                     <button   name="action" dir="rtl" type="submit" class="btn btn-primary" value="Edit Product"  >Edit </button>
-                         
-				   
-						   
-						   </form >
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                  
-                            </div>
-                            
-                        </div>
-                    </div>
                 </div>
 
-               
-         
-               
-                  
+        <div class="container">
+		
+	
+<?php
+$controller->Edit_Offer();
+$row=$controller->View_E_Offer();
 
+
+
+?>
+		
+			        <div class="container">
+		<!--class="col-sm-3"-->
+		<br/>
+							<div   class="col-lg-2">
+							<div ></div>
+							
+							
+		                     <div class="panel panel-red" 	>
+                            <div class="panel-heading">
+                                <h3 > Edit Offer</h3>
+                            </div>
+							</div>
+							</div>
+							<br/><br/><br/>
+							<br/><br/>
+        <!--<h2>Edit_Offer</h2>-->
+		<form action="" method="post" enctype="multipart/form-data">
+			<h3><input name="Name" type="text" class="Name" placeholder="Name" required="" value=<?php echo $row["Name"];?>></h2>
+			<h3><input name="Description" type="text" class="Description" placeholder="Description" required=""value=<?php echo $row["Description"];?>></h3>			
+			<h3><input name="Price_After" type="text" class="Price_After" placeholder="Price_After" required="" value=<?php echo $row["Price_After"];?>></h3>
+			<h3><input name="Precentage" type="text" class="Precentage" placeholder="Precentage" required=""value=<?php echo $row["Precentage"];?>></h3>
+			<h3><input name="Start_date" type="text" class="Start_date" placeholder="Start_date" required="" value=<?php echo $row["Start_date"];?>></h3>
+			<h3><input name="End_date" type="text" class="End_date" placeholder="End_date" required="" value=<?php echo $row["End_date"];?>></h3>			
+			
+			<div class="clear"></div>
+
+		
+       
+	   <h3> <select name="Product" class="pull-Left" >
+         <optgroup  label="Product">
+<?php                                  
+   $result=$controller->View_Products();
+     if (mysqli_num_rows($result) > 0) 
+     {
+    // output data of each row
+         while($row = mysqli_fetch_assoc($result))
+  
     
+         {?>
+          <option >  <?php echo  $row["Name"]; ?> </option>
+ <?php						
+         }
+     } 
+
+    else 
+    {
+      echo "0 results";
+    }
+ ?>  
+          </optgroup> 
+        </select> </h3>
+       
+
+			<h3><input name="action" type="submit" value="Edit"></h3>
+		</form>
+		
+             
+	</div>
+
+	<div class="footer">
+		
+	</div>
+                    
+
+    </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->

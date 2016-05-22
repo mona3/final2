@@ -423,8 +423,6 @@ class Offer extends  foo
 
 
 
-class Offer extends  foo
-{}
 class Gallary extends  foo
 {}
 class Pipes extends  foo
