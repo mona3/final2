@@ -361,6 +361,68 @@ class Company extends  foo
 	
 		
 }
+
+
+//////////////////////////////////////////Offers ////////////////////////////////////////
+
+class Offer extends  foo
+{
+	  public function View_Offer()
+	{		
+            $sql = "SELECT * FROM offer";
+            $result= mysqli_query($this->conn, $sql);
+			return $result;
+	}
+		
+	public function Add_Offer($Name,$Descrip,$Price,$Precent,$St_Date,$E_Date ,$Product_Id)
+	{ 
+            $sql = "INSERT INTO offer ( Name,Description,Price_After,Precentage,Start_date,End_date ,product_Id) Values ('$Name' ,'$Descrip','$Price','$Precent','$St_Date' ,'$E_Date','$Product_Id')";
+            $result = mysqli_query($this->conn, $sql);
+			return $result;
+	}
+		public function Delete_Offer($name)
+	{
+            $sql ="delete FROM offer where Name='".$name."'";
+            $result = mysqli_query($this->conn,$sql);
+			return $result;
+	}
+	
+	public function Edit_Offer($Name,$Descrip,$Price,$Precent,$St_date,$E_date ,$Product_Id ,$Old_name)
+	{        
+		    $sql ="UPDATE offer SET Name ='$Name',Description ='$Descrip' ,Price_After ='$Price',Precentage ='$Precent' ,Start_date='$St_date' ,End_date='$E_date',Product_Id='$Product_Id' where Name='".$Old_name."'";
+            $result = mysqli_query($this->conn,$sql);
+	     	return $result;
+	}
+	public function Get_Offer_Name()
+	{
+            $sql ="SELECT Name FROM offer";
+            $result = mysqli_query($this->conn,$sql);
+			return $result;
+	}
+	public function Get_Offer_Id($name)
+	{
+            $sql ="select Id FROM offer where Name='".$name."'";
+            $result = mysqli_query($this->conn,$sql);
+			$row = mysqli_fetch_assoc($result);
+			return $row["Id"];
+	}
+	public function Get_Offer_info($name)
+	{
+		
+            $sql ="select * FROM offer where Name='".$name."'";
+            $result = mysqli_query($this->conn,$sql);			
+			return $result;
+	}
+
+	
+}
+
+
+
+
+
+
+
 class Offer extends  foo
 {}
 class Gallary extends  foo

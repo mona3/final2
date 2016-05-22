@@ -218,14 +218,14 @@ public function Add_Product()
             $name= $_POST["Product"];
 			
 			$result=$this->Product->Delete_Product($name);
-			//header("Location: http://localhost/888/admin2.php"); /* Redirect browser */	
+			//header("Location: http://localhost/final2/final/admin2.php"); /* Redirect browser */	
            
 	   if($result)
 		  
 		  echo "<script type='text/javascript'>alert('$success');</script>";
 	   else
 		     echo "<script type='text/javascript'>alert('$error');</script>";
-			header("Location: /http://localhost/777/Edit_Product.php"); /* Redirect browser */	
+			header("Location: /http://localhost/final2/final/Edit_Product.php"); /* Redirect browser */	
 	
 	
 
@@ -664,8 +664,164 @@ public function Get_Product_info2()
 
 }
  
-}
+
+	
+	
+	////////////////////////// Offers /////////////////////////////////
+	
+	public function Add_Offer()
+	{
+	   $error="Adding Offer failed";
+	   $success="Offer is added  successfully";
+	   $valid="price must be a number ";
+		if(isset($_POST['action']))
+		{          
+        if($_POST['action']=="Add")
+        {	
+            $name= $_POST["Name"];
+            $Descrip= $_POST["Description"];
+            $Price=$_POST["Price_After"]; 
+			$Precent=$_POST["Precentage"];
+			$St_date=$_POST["Start_date"];
+			$E_date=$_POST["End_date"];
+			$product=$_POST["product"];
+			$result1=$this->Product->Get_Product_Id($product);
+
+			echo $name ;echo $Descrip; echo $Price; echo $Precent;echo $St_date ;echo $E_date; echo $result1; echo "       ";
+			if(Controller::my_is_int($Price))
+			{ 
+		       $result=$this->Offer->Add_Offer($name ,$Descrip,$Price,$Precent,$St_date,$E_date,$result1);
+   			   if($result)
+			   {
+				   echo "battiiii5";
+				   echo "<script type='text/javascript'>alert('$success');</script>";
+			   }
+				
+	           else
+  			   { 
+				  echo "AAAA";
+				  echo "<script type='text/javascript'>alert('$error');</script>"; 
+			   }
+				
+		    }
+			else
+			{
+				echo "<script type='text/javascript'>alert('$valid');</script>";	   
+			}
+		}
+       } 
+	}	
 	
 	
 
+	public function Edit_Offer()
+	{
+		$valid="price must be a number ";
+		$error="Edit_Offer failed";
+   	    $success="Offer is Edited  successfully";
+		
+		 if(isset($_POST['action']))
+        {          
+			if($_POST['action']=="Edit")
+			{
+			 $name= $_POST["Name"];
+            $Descrip= $_POST["Description"];
+            $Price=$_POST["Price_After"]; 
+			$Precent=$_POST["Precentage"];
+			$St_date=$_POST["Start_date"];
+			$E_date=$_POST["End_date"];
+			$Product=$_POST["Product"];
+			$result1=$this->Product->Get_Product_Id($Product);
+			$result2=$_SESSION['offer'];			
+
+
+		if(Controller::my_is_int($Price))
+		{ 
+		       $result=$this->Offer->Edit_Offer($name ,$Descrip,$Price,$Precent,$St_date,$E_date,$result1,$result2);
+			   if($result)
+		  		     echo "<script type='text/javascript'>alert('$success');</script>";
+	         else
+				echo "<script type='text/javascript'>alert('$error');</script>";
+		}
+				else echo "<script type='text/javascript'>alert('$valid');</script>";	
+		}
+	   }
+	}
+
+
+	
+	public function Delete_Offer()
+	{ 
+		$error="Deletion failed";
+	    $success="product deleted  successfully";
+		if(isset($_POST['action3']))
+       {   
+			if (!empty($_POST['action3']=="Delete Offer"))
+			{
+				$name= $_POST["Offer"];
+				$result=$this->Offer->Delete_Offer($name);
+           
+	   if($result)
+		  
+		  echo "<script type='text/javascript'>alert('$success');</script>";
+	   else
+		     echo "<script type='text/javascript'>alert('$error');</script>";
+			header("Location: /http://localhost/final2/final/Edit_Offer.php"); /* Redirect browser */	
+		
+        }
+            
+	 }
+	}
+
+     public function View_Offer()
+	{
+		$result = $this->Offer->View_Offer();
+		return $result ;
+   
+	}
+
+
+public function  Get_Offer_Name()
+	
+	{   session_start();
+		if(isset($_POST['action3']))
+      {          
+        if($_POST['action3']=="Edit Offer")
+        {
+            $name= $_POST["Offer"];			
+			$_SESSION['offer']=$name;
+			
+			
+			
+			
+	        echo "<script>window.location = 'http://localhost/final2/final/Edit_Offer.php' </script>";
+		
+	    }
+	  }
+
+    }
+		public function View_E_Offer()
+		{      
+			$result=$this->Offer->Get_Offer_info($_SESSION['offer']);
+			$row = mysqli_fetch_assoc($result);
+			return $row ;
+			
+		}
+		
+	public function View_S_Offer()
+	{
+	   $content= isset($_GET['content'])?$_GET['content']:'';
+       $result=$this->Offer->Get_Offer_info($content);
+       $row = mysqli_fetch_assoc($result);
+	   return $row ;		
+	}
+
+
+
+
+
+
+
+}
+	
 ?>
