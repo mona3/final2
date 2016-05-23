@@ -514,20 +514,19 @@ class controller
 		return $result2  ;
    
 	}
-	
-	
 	public function Add_to_cart()
 	{
 		 
 		
 		if(isset($_POST["action1"]) )
       {     
-          
-        //$stack = array();
-		
+         
         if($_POST['action1']=="Add")
         {
-		        
+		  
+        $Username = self::get_UserName();	
+        if($Username!=NULL)
+		{	
   	    $row=self::Get_PName();
 		$row2=$row['Id'];
 		$Msg=$this->Order->Check($row2);
@@ -549,8 +548,13 @@ class controller
 	    
 	  }
 	}
+	else { $error = "Sorry you must login first";
+		     echo "<script type='text/javascript'>alert('$error');</script>";}
+	  }
 	  }
 	}
+	
+
 	 public function Delete_from_cart()
 	{
 		//$error = "Sorryuu888uuuuuuuuuuuuu ";
