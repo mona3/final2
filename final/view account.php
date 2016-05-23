@@ -76,14 +76,15 @@ $Username = $controller->get_UserName();
 					<li>
                         <a href="Login.php">Logout</a>
                     </li>
+					<li>
+                        <a href="Order.php">My Cart</a>
+                    </li>
 				 <?php } ?>
                     <li>
                         <a href="Offers.html">Offers</a>
                     </li>
                     
-                	<li>
-                        <a href="Order.php">My Cart</a>
-                    </li>
+                	
 
 
                 </ul>
