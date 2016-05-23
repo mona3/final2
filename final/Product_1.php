@@ -199,10 +199,7 @@ $controller->Add_to_cart();
                     <div class="caption-full">
                         <h4 class="pull-right"><?php echo "$".$row['Price'];?></h4>
                         <h4><a href="#"> <?php echo $row['Name'];?></a>
-						<form action ="" method = "post">
-						<button name="action1" type="submit" class="btn btn-primary">Add To Cart</button>
-			
-						</form>
+						
 						</br>
 						
                         </h4>
@@ -223,9 +220,16 @@ $controller->Add_to_cart();
       <label class="star star-2" for="star-2-2"></label>
       <input class="star star-1" id="star-1-2" type="radio" name="star"/>
       <label class="star star-1" for="star-1-2"></label>
+	  
     </form>
+	
   </div>
+  <h3 class="pull-right"><form action ="" method = "post">
+						<button name="action1" type="submit" class="btn btn-primary">Add To Cart</button>
+			
+						</form></h3>
 </div>
+
                     </div>
             </div>
 
