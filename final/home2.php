@@ -438,10 +438,11 @@ div.autosuggest ul em
                     <li>
                         <a href="view account.php"> <?php echo $Username;?></a>
                     </li>
-				 <?php } ?>
-                    <li>
+					<li>
                         <a href="Login.php">Logout</a>
                     </li>
+				 <?php } ?>
+                    
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>
