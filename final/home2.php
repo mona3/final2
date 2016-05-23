@@ -443,9 +443,7 @@ div.autosuggest ul em
                         <a href="Logout.php">Logout</a>
                     </li>
 				 <?php } ?>
-                    <li>
-                        <a href="Acc_Inf.php">About</a>
-                    </li>
+                   
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>
