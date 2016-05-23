@@ -74,6 +74,9 @@ class Account extends  foo
         
          $_SESSION['login_user'] = $mymail;
          $message = "You are logged in ";
+		 if($mymail=="Admin")
+		   header("location: Admin2.php");
+	   else
 		 header("location: home2.php");
 		 echo $message;
          
