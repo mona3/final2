@@ -537,8 +537,8 @@ public function Add_Product()
 	public function Get_Product_info($Id)
 	{
 		$result1 = $this->Product->Get_Product_info($Id);
-		 $row = mysqli_fetch_assoc($result1);
-			 return $row ;
+		$row = mysqli_fetch_assoc($result1);
+		return $row ;
             
 	}
 	
