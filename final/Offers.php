@@ -68,19 +68,32 @@ session_start();
                     <li>
                         <a href="Sign_up.php">Sign up</a>
                     </li>
-                    <li>
+					<?php   $Username = $controller->get_UserName();
+				 if($Username==Null)
+				 {?>
+					<li>
                         <a href="Login.php">Login</a>
                     </li>
-
-                    <li>
-                        <a href="Acc_Inf.php">About</a>
+					
+				 <?php } else { ?>
+				 <li>
+                        <a href="view account.php"> <?php echo $Username;?></a>
                     </li>
-                    <li>
+					<li>
+                        <a href="Logout.php">Logout</a>
+						
+                    </li>
+					 <li>
+                        <a href="Order.php">Mycart</a>
+                    </li>
+				 <?php } ?>
+				 
+				 
+				 
+                 <li>
                         <a href="Offers.php">Offers</a>
                     </li>
-                	<li>
-                        <a href="Order.php">My Cart</a>
-                    </li>
+                	
 
                 </ul>
             </div>

@@ -441,15 +441,17 @@ div.autosuggest ul em
                     </li>
 					<li>
                         <a href="Logout.php">Logout</a>
+						
+                    </li>
+					 <li>
+                        <a href="Order.php">Mycart</a>
                     </li>
 				 <?php } ?>
                    
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>
-                	<li>
-                        <a href="Order.php">My Cart</a>
-                    </li>
+                	
 					
                         <a>
                         <li>
