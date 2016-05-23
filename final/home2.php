@@ -432,7 +432,7 @@ div.autosuggest ul em
 				 if($Username==Null)
 				 {    ?>
 					<li>
-                        <a href="Login.php">Login</a>dncfksdf
+                        <a href="Login.php">Login</a>
                     </li>
 				 <?php } else { ?>
                     <li>
