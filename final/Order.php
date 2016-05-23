@@ -96,11 +96,13 @@ $Username = $controller->get_UserName();
                     <li>
                         <a href="view account.php"> <?php echo $Username;?></a>
                     </li>
+					<li>
+                        <a href="Login.php">Logout</a>
+                    </li>
 				 <?php } ?>
 
-                    <li>
-                        <a href="Acc_Inf.php">About</a>
-                    </li>
+                    
+					
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>

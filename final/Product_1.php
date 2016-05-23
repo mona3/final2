@@ -113,13 +113,20 @@ label.star:before {
                     <li>
                         <a href="Sign_up.php">Sign up</a>
                     </li>
-                    <li>
+                   <?php   $Username = $controller->get_UserName();
+				 if($Username==Null)
+				 {    ?>
+					<li>
                         <a href="Login.php">Login</a>
                     </li>
-
+				 <?php } else { ?>
                     <li>
-                        <a href="Acc_Inf.php">About</a>
+                        <a href="view account.php"> <?php echo $Username;?></a>
                     </li>
+					<li>
+                        <a href="Login.php">Logout</a>
+                    </li>
+				 <?php } ?>
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>

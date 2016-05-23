@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+include("Controller.php");
+$controller=new controller();
+session_start();
+$result=$controller->View_s_Company();
+$row = mysqli_fetch_assoc($result);
+
+
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,10 +56,21 @@
                     <li>
                         <a href="Sign_up.php">Sign up</a>
                     </li>
-                    <li>
+                    <?php   $Username = $controller->get_UserName();
+				 if($Username==Null)
+				 {    ?>
+					<li>
                         <a href="Login.php">Login</a>
                     </li>
-
+				 <?php } else { ?>
+                    <li>
+                        <a href="view account.php"> <?php echo $Username;?></a>
+                    </li>
+					<li>
+                        <a href="Login.php">Logout</a>
+                    </li>
+				 <?php } ?>
+  
                     <li>
                         <a href="Acc_Inf.php">About</a>
                     </li>
@@ -68,15 +88,7 @@
         </div>
         <!-- /.container -->
     </nav>
-<?php 
-include("Controller.php");
-$controller=new controller();
-session_start();
-$result=$controller->View_s_Company();
-$row = mysqli_fetch_assoc($result);
 
-
-?>
     <!-- Image Background Page Header -->
     <!-- Note: The background image is set within the business-casual.css file. -->
     <!--<header class="business-header">-->
