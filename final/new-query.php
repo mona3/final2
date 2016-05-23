@@ -469,10 +469,11 @@ class Order extends  foo
 		}
 		
 	}
-	public function Delete_Order($Id)
+	public function Delete_order($name)
 	{
-            $sql = "Delete  from Orders where 	Account_Id='".$Id."'";
-            $result= mysqli_query($this->conn, $sql);
+		
+            $sql ="delete FROM orders where Num='".$name."'";
+            $result = mysqli_query($this->conn,$sql);
 			return $result;
 	}
 

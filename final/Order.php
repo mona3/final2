@@ -146,7 +146,7 @@ $Username = $controller->get_UserName();
 
             <div class="row">
 <?php
-    $controller->Delete_Order();
+    $controller->Delete_from_cart();
 	$controller->Modify_Quantity();
     $result=$controller->View_Order();
      if (mysqli_num_rows($result) > 0) 

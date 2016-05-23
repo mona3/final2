@@ -568,6 +568,30 @@ public function Add_Product()
 		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/sd/Order.php">';
 	  }}
 	}
+	
+	 public function Delete_from_cart()
+	{
+		//$error = "Sorryuu888uuuuuuuuuuuuu ";
+		//echo "<script type='text/javascript'>alert('$error');</script>";
+		
+		if(isset($_POST['Action']))
+      {          
+  
+       
+        if (!empty($_POST['Action']=="Delete"))
+        {
+			// $error = "Sorry ";
+		 
+		//echo "<script type='text/javascript'>alert('$error');</script>";
+		$row=self::Get_PName();
+		echo (int)$row['Num'];
+		$this->Order->Delete_order((int)$row['Num']);
+	    }
+	  }
+		
+	}
+	
+	
         
      
 	
