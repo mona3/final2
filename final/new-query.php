@@ -465,7 +465,7 @@ class Order extends  foo
 		//$error = "Sorry Your Login Name or Password is invalid , try again";
 		 
 		// echo "<script type='text/javascript'>alert('$error');</script>";
-			  
+			 
 		}
 		
 	}

@@ -570,7 +570,7 @@ public function Add_Product()
 		
 		$name= $this->Account->get_UserName();
 		$Accont_id = $this->Account->Get_Id($name);
-		$this->Order->Insert_order((int)$row['Num'],$Accont_id,$row['Id']);
+		$this->Order->Insert_order($row['Num'],$Accont_id,$row['Id']);
 		
 		//header("Location: http://localhost/final2/final/Order.php"); 
 		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/final2/final/Order.php">';
@@ -592,7 +592,7 @@ public function Add_Product()
 		 
 		//echo "<script type='text/javascript'>alert('$error');</script>";
 		$row=self::Get_PName();
-		echo (int)$row['Num'];
+		
 		$this->Order->Delete_order((int)$row['Num']);
 	    }
 	  }
