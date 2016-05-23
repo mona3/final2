@@ -537,7 +537,8 @@ class controller
 		$Accont_id = $this->Account->Get_Id($name);
 		$this->Order->Insert_order((int)$row['Num'],$Accont_id,$row['Id']);
 		
-		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/as/Order.php">';
+		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/final2/final/Order.php">';
+
 		
 		//header("Location: http://localhost/final2/final/Order.php"); 
 		}
