@@ -119,21 +119,22 @@ label.star:before {
 					<li>
                         <a href="Login.php">Login</a>
                     </li>
+					
 				 <?php } else { ?>
                     <li>
                         <a href="view account.php"> <?php echo $Username;?></a>
                     </li>
 					<li>
-                        <a href="Login.php">Logout</a>
+                        <a href="Logout.php">Logout</a>
+                    </li>
+					<li>
+                        <a href="Order.php">My Cart</a>
                     </li>
 				 <?php } ?>
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>
-                	<li>
-                        <a href="Order.php">My Cart</a>
-                    </li>
-					
+                	
 					
 					
                </ul>
