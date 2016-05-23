@@ -571,7 +571,7 @@ class controller
 		 
 		//echo "<script type='text/javascript'>alert('$error');</script>";
 		$row=self::Get_PName();
-		echo (int)$row['Num'];
+		//echo (int)$row['Num'];
 		$this->Order->Delete_order((int)$row['Num']);
 	    }
 	  }
