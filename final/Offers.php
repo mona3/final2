@@ -204,7 +204,7 @@ session_start();
                                 <div class="thumbnail">
                                     <!--  <img src="http://placehold.it/320x150" alt="">-->
                                  <div  style="height: 250px">
-								   <?php  //echo '<img src="upload/'.$row["img"].'.jpg"  style="width: 100%;max-height: 100%" height="200"/>';?>
+								   <?php  echo '<img src="upload/'.$row["img"].'.jpg"  style="width: 100%;max-height: 100%" height="200"/>';?>
 								  </div>  
                                     <div class="caption">
                                        <h4 class="pull-right"><?php echo "$" .$row["Price_After"]; ?></h4>
