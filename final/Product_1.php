@@ -200,7 +200,7 @@ $controller->Add_to_cart();
                         <h4 class="pull-right"><?php echo "$".$row['Price'];?></h4>
                         <h4><a href="#"> <?php echo $row['Name'];?></a>
 						<form action ="" method = "post">
-						<input  name="action1" type="submit" value="Add" >
+						<button name="action1" type="submit" class="btn btn-primary">Add To Cart</button>
 			
 						</form>
 						</br>
