@@ -88,14 +88,15 @@ session_start();
 					<li>
                         <a href="Login.php">Logout</a>
                     </li>
+					<li>
+                        <a href="Order.php">My Cart</a>
+                        </li>
 				 <?php } ?>
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>
                     
-					<li>
-                        <a href="Order.php">My Cart</a>
-                        </li>
+					
                        
     </div>
           
