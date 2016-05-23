@@ -198,7 +198,7 @@ session_start();
      {
     // output data of each row
     while($row = mysqli_fetch_assoc($result))
-		 $row1=$ 
+		 $row1=$controller->Get_Product_info($Id) 
          {?>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
