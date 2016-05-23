@@ -62,6 +62,22 @@ session_start();
                 </button>
 				
                 <a class="navbar-brand" href="Admin2.php">SB Admin</a>
+				<a class="navbar-brand" href="Sign_up.php">Sign up</a>
+				<a class="navbar-brand" href="Offers.php">Offers</a>
+				 <?php   $Username = $controller->get_UserName();
+				 if($Username==Null)
+				 {    ?>
+					<li>
+                       <a class="navbar-brand" href="login.php">login</a>
+                    </li>
+					
+				 <?php }
+				 else { ?>
+				 
+				<a class="navbar-brand" href="logout.php">Logout</a>
+				<a class="navbar-brand" href="Order.php">Mycart</a>
+				<?php } ?>
+				
             </div>
 			
 			
