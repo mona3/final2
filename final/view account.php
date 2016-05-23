@@ -51,7 +51,7 @@ $Username = $controller->get_UserName();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="After_Login.php">Home</a>
+                <a class="navbar-brand" href="home2.php">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -60,24 +60,29 @@ $Username = $controller->get_UserName();
                 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                       <a href="view account.php"><?php echo $Username;;?></a>
+				<li>
+                        <a href="Sign_up.php">Sign up</a>
                     </li>
+                    <?php   $Username = $controller->get_UserName();
+				 if($Username==Null)
+				 {    ?>
+					<li>
+                        <a href="Login.php">Login</a>
+                    </li>
+				 <?php } else { ?>
                     <li>
+                        <a href="view account.php"> <?php echo $Username;?></a>
+                    </li>
+					<li>
                         <a href="Login.php">Logout</a>
                     </li>
-
-                    <li>
-                        <a href="Acc_Inf.html">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Posts</a>
-                    </li>
+				 <?php } ?>
                     <li>
                         <a href="Offers.html">Offers</a>
                     </li>
-                    <li>
-                        <a href="Gallery.html">Galleries</a>
+                    
+                	<li>
+                        <a href="Order.php">My Cart</a>
                     </li>
 
 
