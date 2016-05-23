@@ -439,7 +439,7 @@ div.autosuggest ul em
                         <a href="view account.php"> <?php echo $Username;?></a>
                     </li>
 					<li>
-                        <a href="Login.php">Logout</a>
+                        <a href="Logout.php">Logout</a>
                     </li>
 				 <?php } ?>
                     

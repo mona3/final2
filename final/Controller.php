@@ -21,6 +21,14 @@ class controller
 		$this->Order=new Order();
 		
 	}
+	public function Logout()
+	{ 
+	  
+	   $_SESSION["mail"]=Null ;
+	   echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/final2/final/home2.php">';
+	  
+			
+	}
 	public function get_UserName()
 	{ 
 	  
