@@ -31,6 +31,7 @@
 
         }
     </style>
+	
 
 
 
@@ -67,22 +68,13 @@ session_start();
                     <li>
                         <a href="Sign_up.php">Sign up</a>
                     </li>
-                    </li>
-                 <?php   $Username = $controller->get_UserName();
-				 if($Username==Null)
-				 {    ?>
-					<li>
+                    <li>
                         <a href="Login.php">Login</a>
                     </li>
-				 <?php } else { ?>
-                    <li>
-                        <a href="view account.php"> <?php echo $Username;?></a>
-                    </li>
-					<li>
-                        <a href="Login.php">Logout</a>
-                    </li>
-				 <?php } ?>
 
+                    <li>
+                        <a href="Acc_Inf.php">About</a>
+                    </li>
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>
@@ -207,10 +199,11 @@ session_start();
      {
     // output data of each row
     while($row = mysqli_fetch_assoc($result))
-         {			$row1=$controller->Get_Product_info($row["product_Id"]) ;
+         {		
+			$row1=$controller->Get_Product_info($row["product_Id"]) ;
 			 ?>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
+								<div class="col-sm-4 col-lg-4 col-md-4">
                                 <div class="thumbnail">
                                  <div  style="height: 250px">
 								   <?php  echo '<img src="upload/'.$row1["img"].'.jpg"  style="width: 100%;max-height: 100%" height="200"/>';?>
@@ -219,16 +212,24 @@ session_start();
                                        <h4 class="pull-right"><?php echo "$" .$row["Price_After"]; ?></h4>
 										<h4> <a href="Offer_1.php?content=<?php echo $row["Name"];?>"><?php echo $row["Name"];?></a></h4>                              
 									
+										<p><?php echo "quantity:  ".$row1["Num"]; ?></p>										
 										<p><?php echo "Precentage:  ".$row["Precentage"]; ?></p>
+										<p><?php echo "Type:  ".$row1["P_Type"]; ?></p>
+										<p><?php echo "Country:  ".$row1["Country"];?></p>
+										
+
 										<p><?php echo "Start_date:  ".$row["Start_date"];?></p>
 										<p><?php echo "End_date:  ".$row["End_date"];?></p>
+												
+								        
+
 										
-									
+									<br/><br/>
 										
                                     </div>
 									
-					<!--
-                                    <div class="ratings">
+					
+                                   <!-- <div class="ratings">
                                         <p class="pull-right">12 reviews</p>
                                         <p>
                                             <span class="glyphicon glyphicon-star"></span>
@@ -239,6 +240,7 @@ session_start();
 
                                         </p>
                                     </div>-->
+									
                                 </div>
                             </div>
 							

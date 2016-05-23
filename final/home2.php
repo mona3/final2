@@ -438,11 +438,10 @@ div.autosuggest ul em
                     <li>
                         <a href="view account.php"> <?php echo $Username;?></a>
                     </li>
-					<li>
-                        <a href="Logout.php">Logout</a>
-                    </li>
 				 <?php } ?>
-                    
+                    <li>
+                        <a href="Acc_Inf.php">About</a>
+                    </li>
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>
@@ -560,8 +559,8 @@ div.autosuggest ul em
      {
     // output data of each row
     while($row = mysqli_fetch_assoc($result))
- 
-         {?>
+	{
+			 ?>
             <div class="col-sm-4 col-lg-4 col-md-4">
                                 <div class="thumbnail">
                                     <!--  <img src="http://placehold.it/320x150" alt="">-->
@@ -574,7 +573,8 @@ div.autosuggest ul em
                                         
 										<p><?php echo "quantity:  ".$row["Num"]; ?></p>
 										<p><?php echo "Type:  ".$row["P_Type"]; ?></p>
-										<p><?php echo "Country:  ".$row["Country"];?></p>
+										<p><?php echo "Country:  ".$row["Country"];?></p>	
+										
 										
                                     </div>
 									

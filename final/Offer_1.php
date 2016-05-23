@@ -92,30 +92,38 @@ session_start();
 
 <?php 
 $row=$controller->View_S_Offer();
+$row1=$controller->Get_Product_info($row["product_Id"]) ;
 ?>
 
             <div class="col-md-8">
 
                 <div class="thumbnail">
                    <div  style="height: 300px">
-				   <?php // echo '<img class="img-responsive" src="upload/'.$row['img'].'.jpg"  style="width: 100%;max-height: 100%" alt="" height="200" alt="" />'?>
+
+				   <?php  echo '<img class="img-responsive" src="upload/'.$row1['img'].'.jpg"  style="width: 100%;max-height: 100%" alt="" height="200" alt="" />'?>
 				   </div>
 				 
                     <div class="caption-full">
                         <h4 class="pull-right"><?php echo "$".$row['Price_After'];?></h4>
-                        <h4> <?php echo $row['Name'];?></a></h4>
+                        <h4> <font size="5" color="purple" ><?php echo $row['Name'];?></font></a></h4>
 						
+							<p><?php echo "Product Name:  ".$row1["Name"]; ?></p>										
+							<p><?php echo "Price before Offer:  ".$row1["Price"]; ?></p>																	
 							<p><?php echo "Precentage:  ".$row["Precentage"]; ?></p>
 							<p><?php echo "Start_date:  ".$row["Start_date"];?></p>
 							<p><?php echo "End_date:  ".$row["End_date"];?></p>
+							<p><?php echo "quantity:  ".$row1["Num"]; ?></p>
+							<p><?php echo "Type:  ".$row1["P_Type"]; ?></p>
+							<p><?php echo "Country:  ".$row1["Country"];?></p>	
+
+				<p><font size="4" color="red"><?php echo "Description: ";?></font></p>
+				<p><font size="2" color="black"><?php echo $row["Description"];?></font></p>
+							
 
                         </div>
 
                     
                 </div>
-
-				<p><font size="5" color="red"><?php echo "Description: ";?></font></p>
-				<p><font size="3" color="white"><?php echo $row["Description"];?></font></p>
 
     <!-- /.container -->
 
