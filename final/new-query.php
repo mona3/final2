@@ -302,6 +302,15 @@ $sql = "SELECT * FROM Product WHERE Name LIKE '%".$name."%'";
 			return $result;
 	}
 	
+	
+public function buy()
+	{
+	$sql = "INSERT INTO purchases (Address ,date ,phone_num	 ,time  ) Values ('$address' ,'$phone_num' ,'$time','$date'  )";
+            $result = mysqli_query($this->conn, $sql);
+		   
+			 return $result;
+	}
+	
 }
 
 class Company extends  foo
@@ -525,4 +534,5 @@ $error = "ok";
 	
 
 }
+
 ?>
