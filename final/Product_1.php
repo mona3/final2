@@ -206,7 +206,7 @@ $controller->Add_to_cart();
 				 
                     <div class="caption-full">
                         <h4 class="pull-right"><?php echo "$".$row['Price'];?></h4>
-                        <h4><a href="#"> <?php echo $row['Name'];?></a>
+                        <h4><a href="#"> <?php echo $row['Name']; $_SESSION["name"]=$row['Name'];?></a>
 						
 						</br>
 						
@@ -219,7 +219,7 @@ $controller->Add_to_cart();
 				<p><font size="3" color="black"><?php echo $row["Description"];?></font></p>
                 <div class="cont">
   <div class="stars">
-    <form action="">
+    <form action="" method = "post">
       <input class="star star-5" id="star-5-2" type="radio" name="star"/>
       <label class="star star-5" for="star-5-2"></label>
       <input class="star star-3" id="star-3-2" type="radio" name="star"/>
@@ -228,7 +228,11 @@ $controller->Add_to_cart();
       <label class="star star-2" for="star-2-2"></label>
       <input class="star star-1" id="star-1-2" type="radio" name="star"/>
       <label class="star star-1" for="star-1-2"></label>
-	  
+	  <h3 class="pull-right">
+  
+  <button name="action" type="submit" value="submit_rate" class="btn btn-primary">Rate</button>
+  
+  </h3>
     </form>
 	
   </div>
@@ -343,6 +347,6 @@ $controller->Add_to_cart();
 </html>
 <?php 
 
-//$controller->Add_to_cart();
+$controller->Calc_Rate();
 
 ?>
