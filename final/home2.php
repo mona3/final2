@@ -440,7 +440,7 @@ div.autosuggest ul em
                     </li>
 				 <?php } ?>
                     <li>
-                        <a href="Acc_Inf.php">About</a>
+                        <a href="Login.php">Logout</a>
                     </li>
                     <li>
                         <a href="Offers.php">Offers</a>
