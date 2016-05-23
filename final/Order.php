@@ -99,6 +99,9 @@ $Username = $controller->get_UserName();
 					<li>
                         <a href="Login.php">Logout</a>
                     </li>
+					<li>
+                        <a href="Order.php">My Cart</a>
+                    </li>
 				 <?php } ?>
 
                     
@@ -106,9 +109,7 @@ $Username = $controller->get_UserName();
                     <li>
                         <a href="Offers.php">Offers</a>
                     </li>
-                	<li>
-                        <a href="Order.php">My Cart</a>
-                    </li>
+                	
                </ul>
             </div>
 
