@@ -22,9 +22,17 @@ class controller
 		
 	}
 	public function get_UserName()
-	{
-		$res=$this->Account->get_UserName();
-		return $res;
+	{ 
+	  
+	   if(isset($_SESSION["mail"]))  
+	
+	  {
+		  $res=$this->Account->get_UserName();
+		  return $res;
+		  echo $res;
+	  }
+		else 
+			return Null;
 	}
 	
 	

@@ -1,3 +1,10 @@
+<?php 
+
+include("Controller.php");
+$controller=new controller();
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -396,11 +403,7 @@ div.autosuggest ul em
 
 <body>
 
-<?php 
-include("Controller.php");
-$controller=new controller();
 
-?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -425,10 +428,17 @@ $controller=new controller();
                     <li>
                         <a href="Sign_up.php">Sign up</a>
                     </li>
-                    <li>
+                 <?php   $Username = $controller->get_UserName();
+				 if($Username==Null)
+				 {    ?>
+					<li>
                         <a href="Login.php">Login</a>
                     </li>
-
+				 <?php } else { ?>
+                    <li>
+                        <a href="view account.php"> <?php echo $Username;?></a>
+                    </li>
+				 <?php } ?>
                     <li>
                         <a href="Acc_Inf.php">About</a>
                     </li>

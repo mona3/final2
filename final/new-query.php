@@ -74,7 +74,7 @@ class Account extends  foo
         
          $_SESSION['login_user'] = $mymail;
          $message = "You are logged in ";
-		 header("location: After_Login.php");
+		 header("location: home2.php");
 		 echo $message;
          
       }
