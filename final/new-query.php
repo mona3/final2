@@ -303,11 +303,10 @@ $sql = "SELECT * FROM Product WHERE Name LIKE '%".$name."%'";
 	}
 	
 	
-public function buy()
+public function buy($add,$date,$phone_num,$time)
 	{
-	$sql = "INSERT INTO purchases (Address ,date ,phone_num	 ,time  ) Values ('$address' ,'$phone_num' ,'$time','$date'  )";
+	$sql = "INSERT INTO purchases (Address ,date ,phone_num	 ,time  ) Values ('$add' ,'$date' ,'$phone_num' ,'$time' )";
             $result = mysqli_query($this->conn, $sql);
-		   
 			 return $result;
 	}
 	

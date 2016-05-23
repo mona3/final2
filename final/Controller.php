@@ -577,6 +577,29 @@ class controller
 	  }
 		
 	}
+	public function Buy()
+	{
+		
+		if(isset($_POST["action"]) )
+      {     
+         
+        if($_POST['action']=="Buy")
+		{
+			$add=$_POST["address"];
+			$phone_num=$_POST["phone_num"];
+			$time= $_POST["gender"];
+            $date=$_POST["day"];	
+			$this->Product->buy($add,$date,$phone_num,$time);
+			//printf("Number of rows: %d.\n", $adress);
+			
+		}
+	  }
+		
+		
+	}
+	
+	
+	
 			
 	
 	public function Modify_Quantity()

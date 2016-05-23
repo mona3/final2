@@ -52,6 +52,7 @@
 include("Controller.php");
 $controller=new controller();
 
+$controller->buy();
 ?>
 
     <!-- Navigation -->
