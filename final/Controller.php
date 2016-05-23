@@ -522,21 +522,34 @@ class controller
 		if(isset($_POST["action1"]) )
       {     
           
-  
+        //$stack = array();
+		
         if($_POST['action1']=="Add")
         {
 		        
-  	     $row=self::Get_PName();
-		
+  	    $row=self::Get_PName();
+		$row2=$row['Id'];
+		$Msg=$this->Order->Check($row2);
+		 
+		if($Msg == "ok")
+		{
 		$name= $this->Account->get_UserName();
 		$Accont_id = $this->Account->Get_Id($name);
 		$this->Order->Insert_order((int)$row['Num'],$Accont_id,$row['Id']);
 		
+		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/as/Order.php">';
+		
 		//header("Location: http://localhost/final2/final/Order.php"); 
-		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/final2/final/Order.php">';
-	  }}
+		}
+		else 
+		{   $error = "Sorry this order is already added";
+		     echo "<script type='text/javascript'>alert('$error');</script>"; 
+		
+	    
+	  }
 	}
-	
+	  }
+	}
 	 public function Delete_from_cart()
 	{
 		//$error = "Sorryuu888uuuuuuuuuuuuu ";

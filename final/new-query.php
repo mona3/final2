@@ -476,7 +476,46 @@ class Order extends  foo
             $result = mysqli_query($this->conn,$sql);
 			return $result;
 	}
+public function Check($ID)
+	{
+		$sql="Select * from orders where product_Id='".$ID."'";
+	
+		if ($stmt = $this->conn->prepare($sql)) 
+		{
 
+    /* execute query */
+    $stmt->execute();
+
+    /* store result */
+    $stmt->store_result();
+   
+    //printf("Number of rows: %d.\n", $stmt->num_rows);
+if($stmt->num_rows !=0)
+{
+	
+		
+$error = "Sorry";
+		   
+			
+}
+else {  
+$error = "ok";
+
+    
+	 
+    
+}
+		
+	
+	
+		
+		
+     $stmt->close();	
+			
+	}
+	
+ return $error;	
+	}
 	
 	
 	
