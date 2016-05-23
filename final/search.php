@@ -86,7 +86,7 @@ session_start();
                         <a href="view account.php"> <?php echo $Username;?></a>
                     </li>
 					<li>
-                        <a href="Login.php">Logout</a>
+                        <a href="Logout.php">Logout</a>
                     </li>
 					<li>
                         <a href="Order.php">My Cart</a>

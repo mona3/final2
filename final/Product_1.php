@@ -117,7 +117,7 @@ label.star:before {
 				 if($Username==Null)
 				 {    ?>
 					<li>
-                        <a href="Login.php">Login</a>
+                        <a href="Logout.php">Login</a>
                     </li>
 					
 				 <?php } else { ?>

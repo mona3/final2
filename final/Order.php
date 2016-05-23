@@ -223,6 +223,9 @@ $Username = $controller->get_UserName();
            <button name="Action2" dir="rtl" type="submit" class="btn btn-primary" value="Delete All">Delete All</button>
           </div>
 		  </form >
+		  <div>
+           <button name="Action2" dir="rtl" type="submit" class="btn btn-primary" href="buy.php" value="Buy all">Buy all</button>
+          </div>
 	<?php
     } 
 
