@@ -3,7 +3,7 @@
 session_start();
 include("Controller.php");
 $controller=new controller();
-$Username = $controller->get_UserName();
+//$Username = $controller->get_UserName();
 
 	
 ?>
