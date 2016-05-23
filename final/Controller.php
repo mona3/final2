@@ -529,12 +529,14 @@ class controller
 		{	
   	    $row=self::Get_PName();
 		$row2=$row['Id'];
-		$Msg=$this->Order->Check($row2);
+		$name= $this->Account->get_UserName();
+		$Accont_id = $this->Account->Get_Id($name);
+		$Msg=$this->Order->Check($row2,$Accont_id);
 		 
 		if($Msg == "ok")
 		{
-		$name= $this->Account->get_UserName();
-		$Accont_id = $this->Account->Get_Id($name);
+		//$name= $this->Account->get_UserName();
+		//$Accont_id = $this->Account->Get_Id($name);
 		$this->Order->Insert_order((int)$row['Num'],$Accont_id,$row['Id']);
 		
 		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/final2/final/Order.php">';
@@ -542,12 +544,10 @@ class controller
 		
 		//header("Location: http://localhost/final2/final/Order.php"); 
 		}
-		else 
+		else if ($Msg == "Sorry")
 		{   $error = "Sorry this order is already added";
 		     echo "<script type='text/javascript'>alert('$error');</script>"; 
-		
-	    
-	  }
+	    }
 	}
 	else { $error = "Sorry you must login first";
 		     echo "<script type='text/javascript'>alert('$error');</script>";}

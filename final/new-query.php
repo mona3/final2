@@ -488,51 +488,30 @@ class Order extends  foo
             $result = mysqli_query($this->conn,$sql);
 			return $result;
 	}
-public function Check($ID)
+public function Check($ID,$accont_id)
 	{
-		$sql="Select * from orders where product_Id='".$ID."'";
-	
+		$sql="Select * from orders where product_Id='".$ID."' AND Account_Id='".$accont_id."'";  //And Accont_id = '".$accont_id."'";
 		if ($stmt = $this->conn->prepare($sql)) 
 		{
-
-    /* execute query */
-    $stmt->execute();
-
-    /* store result */
-    $stmt->store_result();
-   
+          /* execute query */
+          $stmt->execute();
+         /* store result */
+         $stmt->store_result();
     //printf("Number of rows: %d.\n", $stmt->num_rows);
-if($stmt->num_rows !=0)
-{
-	
-		
-$error = "Sorry";
-		   
-			
-}
-else {  
-$error = "ok";
-
-    
-	 
-    
-}
-		
-	
-	
-		
-		
+        if($stmt->num_rows !=0)
+        {		
+       $error1 = "Sorry";			
+        }
+      else 
+	  {  
+      $error1 = "ok";  
+      }	
      $stmt->close();	
 			
+	  }
+	
+ return $error1;	
 	}
-	
- return $error;	
-	}
-	
-	
-	
-	
-
 }
 
 ?>
