@@ -462,9 +462,9 @@ class Order extends  foo
         $result = mysqli_query($this->conn, $sql);			
 		if($result)
 		{
-		$error = "Sorry Your Login Name or Password is invalid , try again";
+		//$error = "Sorry Your Login Name or Password is invalid , try again";
 		 
-		 echo "<script type='text/javascript'>alert('$error');</script>";
+		// echo "<script type='text/javascript'>alert('$error');</script>";
 			  
 		}
 		
