@@ -198,14 +198,13 @@ session_start();
      {
     // output data of each row
     while($row = mysqli_fetch_assoc($result))
-		 $row1=$controller->Get_Product_info($Id) 
-         {?>
+         {			$row1=$controller->Get_Product_info($row["product_Id"]) ;
+			 ?>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
                                 <div class="thumbnail">
-                                    <!--  <img src="http://placehold.it/320x150" alt="">-->
                                  <div  style="height: 250px">
-								   <?php  echo '<img src="upload/'.$row["img"].'.jpg"  style="width: 100%;max-height: 100%" height="200"/>';?>
+								   <?php  echo '<img src="upload/'.$row1["img"].'.jpg"  style="width: 100%;max-height: 100%" height="200"/>';?>
 								  </div>  
                                     <div class="caption">
                                        <h4 class="pull-right"><?php echo "$" .$row["Price_After"]; ?></h4>
@@ -214,7 +213,8 @@ session_start();
 										<p><?php echo "Precentage:  ".$row["Precentage"]; ?></p>
 										<p><?php echo "Start_date:  ".$row["Start_date"];?></p>
 										<p><?php echo "End_date:  ".$row["End_date"];?></p>
-
+										
+									
 										
                                     </div>
 									
