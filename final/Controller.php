@@ -565,7 +565,7 @@ public function Add_Product()
 		$this->Order->Insert_order((int)$row['Num'],$Accont_id,$row['Id']);
 		
 		//header("Location: http://localhost/final2/final/Order.php"); 
-		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/sd/Order.php">';
+		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=http://localhost/final2/final/Order.php">';
 	  }}
 	}
 	

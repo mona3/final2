@@ -224,10 +224,11 @@ $controller->Add_to_cart();
     </form>
 	
   </div>
-  <h3 class="pull-right"><form action ="" method = "post">
-						<button name="action1" type="submit" class="btn btn-primary">Add To Cart</button>
-			
-						</form></h3>
+  <h3 class="pull-right">
+  <form action ="" method = "post">
+  <button name="action1" type="submit" value="Add" class="btn btn-primary">Add To Cart</button>
+  </form>
+  </h3>
 </div>
 
                     </div>
