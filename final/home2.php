@@ -587,9 +587,9 @@ div.autosuggest ul em
                                         <p class="pull-right">12 reviews</p>
                                         <p>
                                             <?php  $r=round($row["Rate"]); 
-						$i=5;
+						$i=4;
 						
-						while($r>0 and(( $r<5)or ($r==5)))
+						while($r>0 and(( $r<4)or ($r==4)))
 						{
 						?>
 						 <span class="glyphicon glyphicon-star"></span>
